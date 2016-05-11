@@ -83,7 +83,7 @@ As you can see, Botscript provides a powerful way to control dialog flow, cen op
 
 Read more about context tag in [this chapter](/botscript/context/).
 
-## Input
+### Input
 Input tag contains a set of text _patterns_ which are valid for this context.
 The example above shows an inline mode of the input tag with one pattern per input.
 But of course input can contain a set of patterns, like so:
@@ -102,7 +102,7 @@ So Zenbot know what to do and how to answer to the user\'s output when particula
 
 Read more about input tag in [this chapter](/botscript/input/).
 
-## Pattern
+### Pattern
 Pattern is a core of Botscript. It contains a pattern of valid user\'s phrases.
 Otherwise we have to enumerate all possible phrases in a lomg-long list for each input... Do we like it?
 I guess no. So patterns eliminate this problem with ease.
@@ -121,7 +121,7 @@ This helps to make a reusable set of patterns in your Botscript.
 
 Read more about pattern tag in [this chapter](/botscript/pattern/).
 
-## Output
+### Output
 Well, your bot must response somehow on the user\'s input. Otherwise what is it created for?
 
 {% include note.html text="Strictly speaking you do not have to define output tag. In such case your bot will not response with any text on the particular input." %}
