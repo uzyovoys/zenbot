@@ -8,10 +8,10 @@ This tag describes particular context in the Botscript.
 
 It can contain:
 
-- inputs
-- outputs
-- general patterns
-- variables
+- [inputs](/botscript/input/)
+- [outputs](/botscript/output/)
+- general [patterns](/botscript/pattern/)
+- [variables](/botscript/var/)
 - get and post actions
 
 ## Summary
@@ -32,15 +32,75 @@ There is one _root context_ in each Botscript which contains all the rest of the
 ```
 
 {% include note.html text="You can think about context as a \"hole\" into which the user's text input fails.
-It fails through all inputs inside the active context until one of patterns in one of the inputs matches this text.
-Then one of the nested contexts is activated and next user's input will fail through it." %}
+It fails through all inputs inside the context until one of patterns in one of the inputs matches this text.
+Then one of the nested contexts extends the root context and next user's input will fail through it." %}
 
-**What if no one of nested contexts contains appropriate input which matches the user\'s text?**
-In such case the text "bubbles" up to the root context and "fails" through it.
-If there is no result again, the empty result returns to the caller.
+**What if no one of inputs contains appropriate pattern which matches the user\'s text?**
+In such case empty response will be returned.
 
-{% include note.html text="Request bubbles up only in the case if active context is not modal.
-Read about modal contexts in the input tag chapter." %}
+### Context extending
+Each time the context contains appropriate input with matched pattern, one of the nested contexts extends a root context.
+And the next user\'s request will be matched through such _extended_ context.
+
+For example, if your context looks like:
+
+```xml
+<context>
+  <input pattern="* (weather|forecast) [$Date]">
+    <output value="The weather is fine!"/> <!-- Nice response! -->
+
+    <context id="weather_context">
+      <input pattern="* $Date"/>
+      <output value="It will be much better!"/>
+    </context>
+  </input>
+</context>
+```
+
+When user asks something like "What is the weather?" our bot will respond "The weather is fine!"
+
+Then Zenbot extends the root ontext by inner one with id "weather_context".
+It means that a pattern "* $Date" will be added to the root context, so the user can ask "And what about tomorrow?".
+And get back a response "It will be much better!"
+
+Then she can ask again "Next monday" - and our bot will understand her correctly.
+It is so because the root context is already extended and bot understands what we are talking about.
+At the same time user of course can ask again "Tell me a forecast" - and bot will process it.
+
+### Modal context
+Sometimes you need to give an exclusive priority for any context to catch next user\'s request ignoring the rest of root context.
+
+Such technique was named "modal context". Let\'s look:
+
+```xml
+<context> <!-- Regular context -->
+  <input id="greeting" pattern="* remind [me] [to] $Text">
+    <output value="Done!" if="full($Text)"/>
+
+    <context if="empty($Text)" modal="true"> <!-- Modal context -->
+      <output value="What you wich I remind you?"/>
+
+      <input pattern="$Text">
+        <output value="Done!"/>
+      </input>
+
+    </context>
+  </input>
+</context>
+```
+
+Here we have implemented a very simple reminder dialog. User can say "Remind me to call mom this evening".
+In this case bot will respond with "Done!" output.
+
+But what if user didn\'t provide a text of reminder?
+Well, in such case our bot will ask her "What you wich I remind you?"
+And the next user\'s request must be interpreted as a text of reminder. Even she says again "Remind".
+
+This is because a nested context is a _modal_ context.
+So it ignores everything except the inner inputs and always matches the user\'s input through them.
+
+{% include note.html text="Modal context will be canceled once the next request has been processed.
+Thus the third request will be processed through the root context." %}
 
 ## General patterns
 You can define a set of patterns inside context tag. It will not been recognized as an input\'s patterns.
@@ -57,9 +117,14 @@ Such patterns are called "General patterns". And its\' main purpose is to define
 
 ## Attributes
 
+### **modal** attribute
+Controls the modality of the context. You can write here `true` to make this context modal.
+
+Read about modal context above.
+
 ### **id** attribute
 Each context (except root context) has it\'s own unique string identifier.
-You can define your own by _id_ attribute like so:
+You can define your own _id_ attribute like so:
 
 ```xml
 <context id="my_context">
@@ -86,7 +151,8 @@ You do not have to define it if you do not need to use it. In such case Zenbot w
 When Zenbot decides which of nested contexts should be activated, it looks in the optional _if_ attribute to find a condition expression to evaluate.
 
 If such condition is defined Zenbot evaluates it with a bunch of existing variables.
-If this expression returns 1, Zenbot activates this context. Otherwise Zenbot looks through nested contexts further.
+If this expression returns 1, Zenbot extends the root context with this one.
+Otherwise Zenbot looks through nested contexts further.
 
 ```xml
 <input pattern="(hi|hello) *">
@@ -109,3 +175,4 @@ Zenbot stops looking the context and selects "empty_name" and returns output "Hi
 Otherwise Zenbot continues to look through contexts and sees "name_is_present" without any condition.
 Well, good choice - Zenbot will select it and as a result return "Hello Joe!" string (if for example UserName variable contains "Joe" string).
 
+Read more about expressions in [this chapter](/expressions/).

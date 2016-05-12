@@ -1,6 +1,6 @@
 ---
 layout: default
-title: pattern tag
+title: Pattern matching
 permalink: /pattern/matching/
 ---
 

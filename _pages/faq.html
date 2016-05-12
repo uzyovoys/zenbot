@@ -39,6 +39,27 @@ permalink: /faq/
     <h3 id="10">How to integrate Zenbot with my Facebook, Slack or Telegram bot</h3>
     Zenbot has already integrated with such messenger platforms like Facebook, Slack and Telegram.
     So, all you need to bind your Zenbot bot to these messengers - is to provide your credentials in the <a href="https://zenbot.org">web console</a>.
+
+    <h3 id="11">What are the differences between Zenbot and Wit.ai</h3>
+    <p>There are a three major differences between Zenbot and Wit.ai:</p>
+    <ul>
+        <li>
+            <p>Zenbot implements a full stack of NLP techniques, not only user's intent resolution.</p>
+            <p>This means that you do not have to implement a user-to-machine conversation logic on your side.
+            Zenbot proceeds each request, manages contexts, performs actions, evaluates scripts, collects and stores variables and generates text output.
+            Thus the client system just sends a text request and receives a complete response.</p>
+        </li>
+        <li>
+            <p>Zenbot is based on the pattern matching mechanism instead of deep learning "magic".</p>
+            <p>Pattern matching provides a NLP flexibility together with a full control of the dialog system.
+            Thus Zenbot takes already human prepared data and works as expected.</p>
+        </li>
+        <li>
+            <p>Zenbot doesn't provide any web interface for dialog structure designing.</p>
+            <p>Such web interfaces often bring more confusion than a profit if you have a deal with complex dialogs.
+            Thus Zenbot defines a simple XML file format where you can describe such dialog and manage it as a source code for your bot.</p>
+        </li>
+    </ul>
 </div>
 
 <div class="col-md-3 hidden-sm hidden-xs">
@@ -53,5 +74,6 @@ permalink: /faq/
         <li><a href="#8">How to upload Botscript to Zenbot</a></li>
         <li><a href="#9">How to use Zenbot from my application or website</a></li>
         <li><a href="#10">How to integrate Zenbot with my Facebook, Slack or Telegram bot</a></li>
+        <li><a href="#11">What are the differences between Zenbot and Wit.ai</a></li>
     </ul>
 </div>

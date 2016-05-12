@@ -12,7 +12,7 @@ It is like a program for your bot - it contains all data about dialog branching 
 Zenbot "eats" Botscript as an input and builds a bot from it.
 You can manage different versions of the same Botscript on your side (by using Github repository for example) while Botscript is a regular text file.
 
-{% include note.html text="If you are a developer, you can think about Botscript like a Makefile, Ant or Gradle build file." %}
+{% include note.html text="If you are a developer, you can think about Botscript like about a Makefile, Ant or Gradle build file." %}
 
 ## Botscript format
 Botscript is a simple XML formatted file. You can use any favorite text editor to create it.
@@ -27,7 +27,7 @@ Just take a look at a very simple Botscript to have an idea about what it is.
 </context>
 ```
 
-How you can see, this simple Botscript responses with "Hi!" text on every phrase which starts with words "hi" or "hello" and ends with any other words.
+How you can see, this simple Botscript responds with "Hi!" text on every phrase which starts with words "hi" or "hello" and ends with any other words.
 
 So such bot will react on such phrases as "Hello", "Hi" or "Hi there!"
 
@@ -42,7 +42,7 @@ You have to understand some basic principles of Botscripts to be fluent with Zen
 Each Botscript contains a set of nested contexts, inputs, outputs and some other tags to describe the bot\'s logic.
 
 ### Context
-Context in terms of Zenbot looks like a dialog context from human communication.
+Context in terms of Zenbot looks like a dialog context in the human communication.
 
 > We all know that we understand each other not only because we talk on the same language.
 > We also share the same context - a set of "valid" phrases at this moment.
@@ -79,12 +79,13 @@ Then it stores this text as a user\'s name in Zenbot\'s database and greets the 
 
 As you can see, Botscript provides a powerful way to control dialog flow, cen operate with entities fetched from user\'s phrase and evaluate some sort of conditions.
 
-{% include note.html text="This Botscript contains some other components like 'if' and 'scope' attributes. Do not pay much attention to it at this point." %}
+{% include note.html text="This Botscript contains some other components like 'if' and 'scope' attributes.
+Do not pay much attention to it at this point." %}
 
 Read more about context tag in [this chapter](/botscript/context/).
 
 ### Input
-Input tag contains a set of text _patterns_ which are valid for this context.
+Input tag contains a set of phrase _patterns_ which are valid for this context.
 The example above shows an inline mode of the input tag with one pattern per input.
 But of course input can contain a set of patterns, like so:
 
@@ -95,16 +96,16 @@ But of course input can contain a set of patterns, like so:
 </input>
 ```
 
-Each time Zenbot processes a text input only one input can be selected - those one where one of nested patterns is matched with text.
+Each time Zenbot processes a text input, only one input can be selected - those where one of nested patterns is matched with request better.
 
 Input can also contain a set of actions to perform and a set of _outputs_ to return.
-So Zenbot know what to do and how to answer to the user\'s output when particular input is activated.
+Thus Zenbot know what to do and how to answer to the user\'s request when particular input is activated.
 
 Read more about input tag in [this chapter](/botscript/input/).
 
 ### Pattern
-Pattern is a core of Botscript. It contains a pattern of valid user\'s phrases.
-Otherwise we have to enumerate all possible phrases in a lomg-long list for each input... Do we like it?
+Pattern tag is a core of Botscript. It contains a pattern of valid user\'s phrases.
+Otherwise we have to enumerate all possible phrases in a long-long list for each input... Do we like it?
 I guess no. So patterns eliminate this problem with ease.
 
 {% include note.html text="You can think about patterns like about regular expressions but much more adopted to the natural language." %}
@@ -113,7 +114,7 @@ Pattern is a very flexible tool to describe valid phrases and custom entities.
 It is much more powerful then all of those examples we have already seen.
 You can express a very complex patterns with usage of alternatives, options, repeats, wildcards and other stuff.
 
-There is a [special page about pattern syntax](/patterns/) in this documentation.
+There is a [special chapter about pattern syntax](/pattern/syntax.) in this documentation.
 
 Patters can also be included inside a context.
 In such case it become the _general_ patterns which can be used inside another patterns and so on.
@@ -122,9 +123,9 @@ This helps to make a reusable set of patterns in your Botscript.
 Read more about pattern tag in [this chapter](/botscript/pattern/).
 
 ### Output
-Well, your bot must response somehow on the user\'s input. Otherwise what is it created for?
+Well, your bot has to respond somehow on the user\'s input. Otherwise what is it created for?
 
-{% include note.html text="Strictly speaking you do not have to define output tag. In such case your bot will not response with any text on the particular input." %}
+{% include note.html text="Strictly speaking you do not have to define output tag. In such case your bot will not respond with any text on the particular input." %}
 
 Output tag is designed exactly for this. It generates some text output when parent input or context has been activated.
 
@@ -141,10 +142,10 @@ As an input tag, output tag has inline (we have seen it before) and default form
 ```
 
 Zenbot will randomly select one of _item_ inside the _output_ tag and replace all placeholders with actual values.
-So your bot will response as a human - with different phrases on the same request.
+Thus your bot will respond as a human - with different phrases on the same request.
 
 Read more about output tag in [this chapter](/botscript/output/).
 
 # Other Botscript\'s features
-Of course Botscript provides more features like [variables](/botscript/vars/), [HTTP GET/POST requests](/botscript/http/) and even [Javascript code evaluation](/javascript/).
+Of course Botscript provides much more features like [variables](/botscript/var/), HTTP [GET](/botscript/get/) and [POST](/botscript/post/) requests and even [Javascript code evaluation](/javascript/).
 You can read about all of them the corresponding chapters.

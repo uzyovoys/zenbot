@@ -8,18 +8,18 @@ This tag describes input or general pattern.
 
 It may contain:
 
-- nested patterns
+- nested [patterns](/botscript/pattern/)
 
-# Summary
+## Summary
 Pattern matching is a base Zenbot\'s technology.
 It enables Zenbot to quickly match user\'s text input through a set of input patterns to search the most appropriate context.
 
 Read more about patterns and pattern matching in the [special chapter](/pattern/matching/).
 
-# Input and general patterns
+## Input and general patterns
 There are two different types of patterns in Zenbot - _general_ and _input_.
 
-## General patterns
+### General patterns
 This type of patterns doesn\'t take a part in the context pattern matching, but it provides a source for another patterns.
 
 There is an example of such general pattern:
@@ -42,7 +42,7 @@ This way it can be reused in any pattern (general or input) inside **this or nes
 {% include note.html text="So if user says something like \"Apple\" or \"Orange\" nothing happens.
 The context's input will match only phrases like \"I want some apple please\". " %}
 
-## Input patterns
+### Input patterns
 This type of patterns lives inside the [input tag](/botscript/input/) and take a part in the input matching process.
 
 Unlike the general patterns it don\'t have a names and can\'t be reused in another patterns.
@@ -50,7 +50,7 @@ Unlike the general patterns it don\'t have a names and can\'t be reused in anoth
 {% include note.html text="Regarding the example above, the second pattern is an input pattern." %}
 
 ## Nested patterns
-Defining pattern it would be helpful to distribute different parts of a single pattern so it could be more readable instead of writing everything in one pattern tag.
+It would be helpful to distribute different parts of a single pattern so it could be more readable instead of writing everything in a single pattern tag.
 
 ```xml
 <pattern name="Food">
@@ -62,3 +62,18 @@ Defining pattern it would be helpful to distribute different parts of a single p
 There we have defined a general pattern "Food" which matches such phrases as "Potatos", "Tomatos", "Raspberry" and "Razz".
 We could define it in a single oneliner like `(potatos|tomatos|raspberry|razz)`, but imagine if it is a really long list of variants.
 
+## Attributes
+
+### **value** attribute
+This attribute contains a pattern\'s content in form of [pattern syntax](/pattern/syntax/).
+
+{% include note.html text="This attribute is required if you don't define pattern through nested patterns." %}
+
+### **name** attribute
+Defines a unique name of the general pattern.
+You can then reference such pattern inside another one by this name, using `$` symbol before the name.
+
+{% include note.html text="This attribute is required for general patterns only. It doesn't affect input patterns." %}
+
+Do not use any special symbols and [pattern syntax](/pattern/syntax/) reserved symbols and words in the name of your patterns.
+Also note that each name must be unique through all patterns in your Botscript and it must not clash with [common patterns](/pattern/common/).
