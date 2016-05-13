@@ -44,7 +44,7 @@ A star symbol `*` (named _wildcard_) could be used to define a possible set of u
 ### Flexy words
 You can use wildcards before the first letter of word or after the last one (or both) to make such word _flexible_.
 
-`apple*` - matches both "Apple" and "Apples" words (and even "aplesssss").
+`apple*` - matches both "Apple" and "Apples" words (and even "applesssss").
 
 `*determine*` - matches "Determine", "Determines" or "Undetermined".
 
