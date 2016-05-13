@@ -14,7 +14,7 @@ It may contain:
 While processing the user\'s request, bot can save and operate with a bunch of custom variables.
 Such variables can be a source for another variables, been used for replacing placeholders in outputs and scripts or take a part in the [condition expressions](/expressions/).
 
-Zenbot also returns full set of existing and newly created variables in the REST response _vars_ field:
+Zenbot collects variables through dialog and returns a full set of existing and newly created variables in the REST response\'s _vars_ field:
 
 ```json
 {
@@ -38,6 +38,10 @@ Zenbot also returns full set of existing and newly created variables in the REST
   ]
 }
 ```
+
+Thus you can fetch a full set of variables available for the current user on your side to make some stuff with them.
+
+{% include note.html text="Note about variables scopes below." %}
 
 ## How Zenbot loads variables
 **Zenbot preloads a set of existing variables for each user\'s request.**

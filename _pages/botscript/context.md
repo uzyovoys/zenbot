@@ -67,6 +67,8 @@ Then she can ask again "Next monday" - and our bot will understand her correctly
 It is so because the root context is already extended and bot understands what we are talking about.
 At the same time user of course can ask again "Tell me a forecast" - and bot will process it.
 
+{% include note.html text="Thus instead of final state machine paradigm, Zenbot continuously extends the root context for dialog branching implementation." %}
+
 ### Modal context
 Sometimes you need to give an exclusive priority for any context to catch next user\'s request ignoring the rest of root context.
 
