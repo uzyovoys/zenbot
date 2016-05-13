@@ -113,6 +113,10 @@ li.sidebar-brand > a {
     margin: 10px;
 }
 
+.content {
+    padding-bottom: 50px;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;

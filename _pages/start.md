@@ -45,6 +45,6 @@ So you can easily spread your bot over these platforms to make your service avai
 As you will see, there are no additional requirements to you before you can start use Zenbot.
 All you have to do - is to [read about Botscript](/botscript/) and imagine how your users would converse with your app or chat bot.
 
-The next point is to [have a look at some examples of Botscripts](/examples/) and start to create your own to make a new awesome bot!
+The next point is to [have a look at some examples of Botscripts](/soon/) and start to create your own to make a new awesome bot!
 
 After all just upload your Botscript through [Zenbot web console](https://zenbot.org) and test it.

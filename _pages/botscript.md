@@ -114,10 +114,10 @@ Pattern is a very flexible tool to describe valid phrases and custom entities.
 It is much more powerful then all of those examples we have already seen.
 You can express a very complex patterns with usage of alternatives, options, repeats, wildcards and other stuff.
 
-There is a [special chapter about pattern syntax](/pattern/syntax.) in this documentation.
+There is a [special chapter about pattern syntax](/pattern/syntax/) in this documentation.
 
 Patters can also be included inside a context.
-In such case it become the _general_ patterns which can be used inside another patterns and so on.
+In such case it become the _custom_ patterns which can be used inside another patterns and so on.
 This helps to make a reusable set of patterns in your Botscript.
 
 Read more about pattern tag in [this chapter](/botscript/pattern/).
