@@ -27,6 +27,10 @@ Just take a look at a very simple Botscript to have an idea about what it is.
 </context>
 ```
 
+{% include note.html text="You can find a similarity with well known AIML here.
+But of course Zenbot provides much more powerful and flexible tools and has different paradigm.
+Read more further." %}
+
 How you can see, this simple Botscript responds with "Hi!" text on every phrase which starts with words "hi" or "hello" and ends with any other words.
 
 So such bot will react on such phrases as "Hello", "Hi" or "Hi there!"
