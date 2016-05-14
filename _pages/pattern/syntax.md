@@ -146,3 +146,22 @@ To solve this use please `::` symbol between an alias and regular pattern\'s nam
 There are two numbers in the example pattern above.
 Thus using `::` we can easily reference each other without messing it up.
 
+### Repeats
+If you have some part of your pattern which can be present multiple times, you can use `repeat`:
+
+```xml
+<input pattern="repeat($Number)">
+  <var name="MyNumbers" value='join($Number, " ")'/>
+  <output value="$MyNumbers"/>
+</input>
+```
+
+This simple script will return a text output "1 22 3" on the user\'s "One twenty two three".
+
+{% include note.html text="Note that Number variable will contain array of integers in such case.
+But if user says only \"one\", Number will contain a regular integer. " %}
+
+In the case of `repeat` the repeated part must be present at least once in the text input to be matched.
+To make it fully optional just enclose it in the square brackets:
+
+`[repeat($Number)]` - matches 0 or more numbers.
