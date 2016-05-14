@@ -86,7 +86,7 @@ If you need to include one pattern into another (to reuse some _custom_ pattern)
 ```
 
 This also allows you to fetch a part of user\'s phrase which is corresponding to this custom pattern.
-In the REST API\'s response on the "I want two apples" request you will se something like this:
+In the [REST API](/rest/) response on the "I want two apples" request you will se something like this:
 
 ```json
 {

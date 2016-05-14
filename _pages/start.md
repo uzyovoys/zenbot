@@ -34,7 +34,7 @@ As a result, Zenbot generates some text output and bunch of additional variables
 {% include note.html text="Note that you do not have to have any external servers! Zenbot hosts all your bots itself." %}
 
 ## Messengers Integration and REST API
-You can use Zenbot’s REST API to post text requests from any of your apps or websites and get output.
+You can use Zenbot’s [REST API](/rest/) to post text requests from any of your apps or websites and get output.
 
 But moreover, Zenbot is already integrated with such popular messengers as Facebook Messenger, Slack and Telegram!
 So you can easily spread your bot over these platforms to make your service available as a chat bot for millions of customers!
