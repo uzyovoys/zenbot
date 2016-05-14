@@ -36,6 +36,8 @@ You can also provide _user\'s unique identifier_ or (and) _complete current user
 
 Thus Zenbot allows you to control your bot for each user remotely - you can even change it\'s state on your side and post it with a request, rewriting the current state of this user on Zenbot\'s side.
 
+**User\'s state** contains a set of currently available variables, current active dialog context and it\'s modality.
+
 ### Parameters
 You have to pass the next set of parameters in your requests to REST API:
 
@@ -46,7 +48,7 @@ The text of request. **Required for each request.**
 A unique user\'s identifier in your system.
 This id will be used by Zenbot to manage current user\'s state.
 
-{% include note.html text="This parameter is required if you wish Zenbot to manage the user's state on Zenbot\'s side.
+{% include note.html text="This parameter is required if you wish Zenbot to manage the user's state on Zenbot's side.
 Otherwise you have to store and manage user's state on your side." %}
 
 #### context
