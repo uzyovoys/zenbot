@@ -11,7 +11,7 @@ It may contain:
 - inner Javascript
 
 ## Summary
-While processing the user\'s request, bot can save and operate with a bunch of custom variables.
+While processing the user\'s request, bot can save and manage a bunch of custom variables.
 Such variables can be a source for another variables, been used for replacing placeholders in outputs and scripts or take a part in the [condition expressions](/expressions/).
 
 Zenbot collects variables through dialog and returns a full set of existing and newly created variables in the REST response\'s _vars_ field:
@@ -42,6 +42,8 @@ Zenbot collects variables through dialog and returns a full set of existing and 
 Thus you can fetch a full set of variables available for the current user on your side to make some stuff with them.
 
 {% include note.html text="Note about variables scopes below." %}
+
+**Read introduction to variables in the [special chapter](/vars/variables/).**
 
 ## How Zenbot loads variables
 **Zenbot preloads a set of existing variables for each user\'s request.**

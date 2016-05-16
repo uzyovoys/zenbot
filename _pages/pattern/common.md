@@ -19,7 +19,7 @@ This pattern matches all undefined words.
 {% include note.html text="Note that Text pattern could also be empty while it matches even empty string." %}
 
 ## Number
-This pattern matches all kind of integer numbers and have an integer as a value.
+This pattern matches all kind of integer numbers and has an integer as a value.
 
 ```xml
 <input pattern="$Number">
