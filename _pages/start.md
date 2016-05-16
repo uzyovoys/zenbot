@@ -29,7 +29,7 @@ Zenbot creates a bot from your Botscript and proceeds all text requests to your 
 
 You also can provide some code in your Botscript, so Zenbot can compute it "on-the-fly" while processing a request.
 
-As a result, Zenbot generates some text output and bunch of additional variables. It can also call external HTTP services and even store some data.
+As a result, Zenbot generates some text output and bunch of additional [variables](/vars/variables/). It can also call external HTTP services and even store some data.
 
 {% include note.html text="Note that you do not have to have any external servers! Zenbot hosts all your bots itself." %}
 
