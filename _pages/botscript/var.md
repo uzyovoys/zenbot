@@ -8,7 +8,7 @@ This tag defines a variable which should be saved by Zenbot.
 
 It may contain:
 
-- inner Javascript
+- inner [Javascript](/vars/javascript/)
 
 ## Summary
 While processing the user\'s request, bot can save and manage a bunch of custom variables.
@@ -176,6 +176,8 @@ Enclose a Javascript code inside inner _script_ tag:
 
 As you can see Zenbot provides a really flexible way to manage variables.
 It can be calculated by four different ways and saved in three different scopes.
+
+Read more about Javascript usage in the [special chapter](/vars/javascript/).
 
 ## Attributes
 

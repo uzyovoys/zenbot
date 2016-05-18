@@ -148,7 +148,7 @@ Thus if you would like to integrate your application, website or service with Ze
 Moreover, you can post or modify such variables with a user\'s request through HTTP POST request body.
 
 ## Javascript
-You can also use a regular Javascript programming language for variable calculation:
+You can also use a regular [Javascript programming language](/vars/javascript/) for variable calculation:
 
 ```xml
 <input pattern="repeat($Number)">
