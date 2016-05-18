@@ -133,7 +133,7 @@ Just look:
 Thus we can reference each pattern in the variable\'s value to assign this variable to the pattern\'s content.
 
 ### Expression
-You can write some [expression](/expressions/) which will be evaluated to assign the result to the variable.
+You can write some [expression](/vars/expressions/) which will be evaluated to assign the result to the variable.
 
 ```xml
 <var name="TwoAndTwo" value="2 + 2"/>
@@ -142,7 +142,7 @@ You can write some [expression](/expressions/) which will be evaluated to assign
 ```
 
 ### Javascript
-You can even use [Javascript](/javascript/) expressions as a value for your variables.
+You can even use [Javascript](/vars/javascript/) expressions as a value for your variables.
 
 There are two possible forms:
 
@@ -191,7 +191,7 @@ Define a scope of variable in this optional attribute if you woudld like to cont
 There are three possible values: _input_ (default value), _context_ and _user_.
 
 ### **if** attribute
-This optional attribute contains an [expression](/expressions/) of variable\'s condition.
+This optional attribute contains an [expression](/vars/expressions/) of variable\'s condition.
 If it is defined Zenbot will evaluate it first and if it returns 1, Zenbot will evaluate the variable\'s value.
 Otherwise this variable will be skipped.
 

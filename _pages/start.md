@@ -39,7 +39,7 @@ You can use Zenbot’s [REST API](/rest/) to post text requests from any of your
 But moreover, Zenbot is already integrated with such popular messengers as Facebook Messenger, Slack and Telegram!
 So you can easily spread your bot over these platforms to make your service available as a chat bot for millions of customers!
 
-{% include note.html text="And once again — you do not have to implement all these messenger APIs and host such implementation on external servers! Zenbot takes care about this for you. All you need is to provide settings for each messenger platform through Zenbot web console." %}
+{% include note.html text="And once again — you do not have to implement all these messengers API and host such implementation on external servers! Zenbot takes care about this for you. All you need is to provide settings for each messenger platform through Zenbot web console." %}
 
 # How to Start
 As you will see, there are no additional requirements to you before you can start using Zenbot.

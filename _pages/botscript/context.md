@@ -177,4 +177,4 @@ Zenbot stops looking the context and selects "empty_name" and returns output "Hi
 Otherwise Zenbot continues to look through contexts and sees "name_is_present" without any condition.
 Well, good choice - Zenbot will select it and as a result return "Hello Joe!" string (if for example UserName variable contains "Joe" string).
 
-Read more about expressions in [this chapter](/expressions/).
+Read more about expressions in [this chapter](/vars/expressions/).

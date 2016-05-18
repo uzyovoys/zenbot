@@ -66,4 +66,4 @@ If output must return a text only in some case, you can define such condition in
 Zenbot will evaluate it and will select this output if the result will equal 1.
 Otherwise Zenbot continues to look through the set of output tags to select one of them.
 
-Read more about expressions in [this chapter](/expressions/).
+Read more about expressions in [this chapter](/vars/expressions/).

@@ -97,6 +97,6 @@ Define the URL of the external service in this required attribute.
 Define a name of [variable](/botscript/var/) to save the response in for this request. It is required attribute.
 
 ### **if** attribute
-You can define a condition (using [expressions](/expressions/)) which will be performed to say Zenbot if it should do a request.
+You can define a condition (using [expressions](/vars/expressions/)) which will be performed to check if Zenbot should execute a request.
 If such condition is defined, Zenbot will previously evaluate it and if it returns 1 Zenbot will perform request.
 Otherwise this request will be skipped.
