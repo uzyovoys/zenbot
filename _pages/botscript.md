@@ -51,7 +51,7 @@ Context in terms of Zenbot looks like a dialog context in the human communicatio
 > We all know that we understand each other not only because we talk on the same language.
 > We also share the same context - a set of "valid" phrases at this moment.
 
-Each context in Zenbot contains a set of _inputs_ (valid phrases) and set of actions Zenbot have to perform.
+Each context in Zenbot contains a set of _inputs_ (valid phrases) and set of actions Zenbot has to perform.
 It also can contain nested contexts to implement dialog branching.
 Let\'s look at this example which greets a user.
 
