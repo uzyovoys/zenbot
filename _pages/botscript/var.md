@@ -201,3 +201,6 @@ Otherwise this variable will be skipped.
 <var name="MyVar" value="$Text" if="full($Text)"/>  <!-- Assign Text's content to MyVar if it is not empty -->
 <var name="MyVar" value="Empty" if="empty($Text)"/> <!-- Assign "Empty" text to the MyVar if Text is empty -->
 ```
+
+### **lang** attribute
+Define user\'s request language code if you would like this variable to be evaluated only for particular language.

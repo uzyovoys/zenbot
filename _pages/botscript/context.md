@@ -178,3 +178,9 @@ Otherwise Zenbot continues to look through contexts and sees "name_is_present" w
 Well, good choice - Zenbot will select it and as a result return "Hello Joe!" string (if for example UserName variable contains "Joe" string).
 
 Read more about expressions in [this chapter](/vars/expressions/).
+
+### **lang** attribute
+Once Botscript is language-independent, you can define the language code of user\'s request to activate the particular context.
+If user\'s language is not equal to the defined language, the context will be skipped automatically.
+
+Such attribute is the same as an expression like `$req_lang == "en"`.

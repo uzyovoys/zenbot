@@ -67,3 +67,11 @@ Zenbot will evaluate it and will select this output if the result will equal 1.
 Otherwise Zenbot continues to look through the set of output tags to select one of them.
 
 Read more about expressions in [this chapter](/vars/expressions/).
+
+### **lang** attribute
+Define user\'s request language code if you would like this output to be generated only for particular language.
+
+```xml
+<output value="Hi $UserName!" lang="en"/>    <!-- English variant -->
+<output value="Hallo $UserName!" lang="de"/> <!-- Deutche variant -->
+```

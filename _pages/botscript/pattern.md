@@ -26,7 +26,7 @@ There is an example of such custom pattern:
 
 ```xml
 <context>
-  <pattern name="Fruit" value="(apple*|orange*)"/> <!-- General pattern -->
+  <pattern name="Fruit" value="(apple*|orange*)"/> <!-- Custom pattern -->
 
   <input>
     <pattern value="* (want|wanna) * $Fruit *"/> <!-- Input pattern -->
@@ -51,6 +51,11 @@ Unlike the custom patterns it don\'t have a names and can\'t be reused in anothe
 
 ### Common patterns
 Zenbot also provides a set of widely used [common patterns](/pattern/common/) for you.
+
+### Custom entities
+Sometimes you cannot define a full set of pattern of some type (like cities of the world) in your Botscript.
+
+For such type of patterns Zenbot provides a special mechanism named [custom entities](/pattern/entities/).
 
 ## Nested patterns
 It would be helpful to distribute different parts of a single pattern so it could be more readable instead of writing everything in a single pattern tag.

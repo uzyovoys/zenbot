@@ -100,3 +100,6 @@ Define a name of [variable](/botscript/var/) to save the response in for this re
 You can define a condition (using [expressions](/vars/expressions/)) which will be performed to check if Zenbot should execute a request.
 If such condition is defined, Zenbot will previously evaluate it and if it returns 1 Zenbot will perform request.
 Otherwise this request will be skipped.
+
+### **lang** attribute
+Define user\'s request language code if this action should be performed only for the particular language.

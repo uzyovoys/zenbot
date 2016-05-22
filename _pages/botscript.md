@@ -151,5 +151,5 @@ Thus your bot will respond as a human - with different phrases on the same reque
 Read more about output tag in [this chapter](/botscript/output/).
 
 # Other Botscript\'s features
-Of course Botscript provides much more features like [variables](/botscript/var/), HTTP [GET](/botscript/get/) and [POST](/botscript/post/) requests and even [Javascript code evaluation](/vars/javascript/).
+Of course Botscript provides much more features like [variables](/botscript/var/), [custom entities](/pattern/entities/), HTTP [GET](/botscript/get/) and [POST](/botscript/post/) requests and even [Javascript code evaluation](/vars/javascript/).
 You can read about all of them the corresponding chapters.
