@@ -40,3 +40,9 @@ And we have created a [special chapter about pattern syntax](/pattern/syntax/) w
 ## Common patterns
 Zenbot also provides a set of widely used common patterns you can reuse in your Botscript.
 Read more about them in the [special chapter](/pattern/common/).
+
+## Custom entities
+There is also another type of patterns Zenbot provides for you.
+[Custom entities](/pattern/entities/) enables you to manage a big set of pattern\'s variants without having to enumerate all of them in your Botscript.
+For example if you need to make a pattern which matches on of thousands of cities in the world.
+Or matches through a database of employers\' names in your company.

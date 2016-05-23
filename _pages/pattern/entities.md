@@ -75,22 +75,61 @@ So just pick the appropriate language from the list of available languages.
 
 {% include note.html text="Note that there is a predefined set of languages available for Custom entities." %}
 
-#### Entity CSV file
-Once entity\'s name and language have been provided, upload a CSV file with your entity\'s data.
+#### Entity TSV file
+Once entity\'s name and language have been provided, upload a TSV (tab separated values) file with your entity\'s data.
 
-This file must be a comma-separated CSV formatted file, where the first part of each line is any value you wish to map the item to, and all others parts are names of this item.
+**This file must be a tab-separated TSV formatted file**, where the first part of each line is any value you wish to map the item to, and all others parts are names of this item.
 
 For example if we would like to create _cities_ custom entity, we can use the following format of our CSV file:
 
-```csv
-52.2 0.11667,Cambridge
-52.5 -2.08333,Dudley
-37.03737 -76.33161,East Hampton
+```tsv
+52.2,0.11667  Cambridge
+52.5,-2.08333 Dudley
+37.03737,-76.33161  East Hampton
 ```
 
 Here is a latitude and longitude in the first part, and city\'s name in the second.
+_Please note that we used a tab delimiter, not comma._
 
-{% include note.html text="Note that you have to provide al least two parts in each line." %}
+{% include note.html text="Note that you have to provide at least two parts in each line." %}
+
+#### Entity value
+Once matched, entity is mapped to the value you have provided in the first part of TSV file.
+Thus REST API and your Botscript have a deal with this mapped value when referencing the pattern value.
+
+But there is a little "magic" Zenbot performs with such a value.
+_If your value is a JSON formatted string, Zenbot will try to parse it and convert to the regular object._
+
+E.g. if your TSV file for "persons" entity will look like this:
+
+```csv
+{"name" : "Joe Doe", "position" : "Manager"}  Joe Doe Joe
+{"name" : "Alice", "position" : "Sales"}  Alice
+```
+
+Zenbot will return a regular object as a value of the matched pattern:
+
+```xml
+<context>
+  <pattern name="Person" value="entity://persons"/>
+  <input pattern="$Person">
+    <var name="PersonName" value='get("name", $Person)'/>
+  </input>
+</context>
+```
+
+The REST API response will contain a "Person" variable:
+
+```json
+{
+  "name" : "Person",
+  "scope" : "context",
+  "value" : {
+    "name" : "Joe Doe",
+    "position" : "Manager"
+  }
+}
+```
 
 ### Entity reference
 Once created, you can reference a new entity in the Botscript:
@@ -106,7 +145,7 @@ Zenbot can return more than one variable for each matched entity while there cou
 
 ### Index time
 Note that there may be a long time before each item of the custom entity will be indexed.
-This depends on the overall size of entity\'s CSV file.
+This depends on the overall size of entity\'s TSV file.
 
 ### Matching performance
 Custom entities don\'t affect an overall matching performance once the index is built.

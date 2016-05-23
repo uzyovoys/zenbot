@@ -26,6 +26,9 @@ Just to refresh our experience let\'s look at samples of some patterns before th
 - you can include one pair of brackets into another without limitations
 - you cannot use a star symbol `*` in the middle of word
 
+## Custom entities
+Note that you can also use [custom entities](/pattern/entities/) instead of patterns if you have a deal with big data (like all cities in the world) or if your need to change pattern\'s content without Botscript changing.
+
 ### Words
 The most simple component you can use in your patterns.
 The user\'s input will be matched only in case of full equality with such pattern.
