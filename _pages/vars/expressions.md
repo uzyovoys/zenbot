@@ -69,10 +69,10 @@ Zenbot provides a set of common arithmetic operators. Boolean operators are also
 - `*` - multiplication
 - `+` - addition
 - `-` - subtraction
-- `<=` - less or equal
-- `>=` - more or equal
-- `<` - less than
-- `>` - greater than
+- `lte` - less or equal
+- `gte` - more or equal
+- `lt` - less than
+- `gt` - greater than
 - `!=` - not equal
 - `==` - equal
 - `and` - boolean AND
