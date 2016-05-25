@@ -44,6 +44,10 @@ You have to pass the next set of parameters in your requests to REST API:
 #### text
 The text of request. **Required for each request.**
 
+#### lang
+A string code of request\'s language.
+Zenbot will detect the language of request automatically, but you can overwrite this value by this parameter.
+
 #### user
 A unique user\'s identifier in your system.
 This id will be used by Zenbot to manage current user\'s state.
@@ -80,6 +84,14 @@ The current user\'s time GMT offset in minutes. **Signed integer**
 Pass this parameter if your bot has a deal with dates and times, so it could resolve relative dates and times.
 
 {% include note.html text="Both last parameters should go together." %}
+
+#### ll
+The current user\'s geo position in string format _latitude,longitude_.
+
+Pass this parameter if your bot has a deal with some geo-related tasks.
+
+You also can pass this parameter instead of _timestamp_ and _offset_.
+Zenbot will obtain current time and offset by latitude and longitude automatically.
 
 ## POST method
 If you plan to manage user\'s state on your side or wish to rewrite some variables, please use POST requests with next format:
