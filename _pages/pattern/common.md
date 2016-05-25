@@ -40,12 +40,12 @@ As a result this pattern will return a value like this:
 ```json
 {
   "day" : 14, "month" : 4, "year" : 2016,
-  "formatted" : "05.14.2016",
+  "formatted" : "2016-05-14",
   "date": 1463198400000
 }
 ```
 
-Format is self descriptive. _date_ field contains a UNIX time number.
+Format is self descriptive. _date_ field contains a UNIX time (number of milliseconds) in UTC timezone.
 
 ## Time
 Matches absolute and relative forms of time.

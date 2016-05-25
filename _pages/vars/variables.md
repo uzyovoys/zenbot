@@ -172,3 +172,17 @@ How you can see, you can reference each external variable inside the Javascript 
 {% include note.html text="Note that you should not to place $ symbol before the variable name inside the Javascript code." %}
 
 Please read more details about variables usage in [var tag chapter](/botscript/var/).
+
+## Global variables
+Zenbot provides a set of global variables for each request.
+Each of them has "req_" prefix so that you can easily distinguish it from a regular variables.
+
+- **req_text** - a source text of user\'s request (string)
+- **req_score** - matching score (float number)
+- **req_lang** - request\'s language code (string)
+- **req_lat** - user\'s latitude (optional double number)
+- **req_lon** - user\'s longitude (optional double number)
+- **req_user** - user\'s identifier (optional string)
+- **req_context** - request\'s context identifier (optional string)
+- **req_timestamp** - user\'s local time timestamp in milliseconds (number)
+- **req_offset** - user\'s local time GMT offset in minutes (number)
