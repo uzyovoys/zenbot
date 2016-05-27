@@ -189,6 +189,17 @@ Takes an array of any type and a separator string and returns a joined string.
 
 ***
 
+#### fmt
+Takes a number or date or time variable, a date or time format pattern and a target language code and returns a formatted date or time string.
+
+`fmt($Date, "dd-MM-yyy", $req_lang)` - returns a formatted string as day-month-year
+
+`fmt($Time, "hh:mm", $req_lang)` - returns a formatted string as hours-minutes
+
+You can read about date/time pattern syntax [here](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html).
+
+***
+
 #### get
 Takes a number index and array, or a string field and object and returns element from array by index, or a field\'s value from object.
 

@@ -53,7 +53,7 @@ Unlike the custom patterns it don\'t have a names and can\'t be reused in anothe
 Zenbot also provides a set of widely used [common patterns](/pattern/common/) for you.
 
 ### Custom entities
-Sometimes you cannot define a full set of pattern of some type (like cities of the world) in your Botscript.
+Sometimes you cannot define a full set of patterns of some type (like cities of the world) in your Botscript.
 
 For such type of patterns Zenbot provides a special mechanism named [custom entities](/pattern/entities/).
 

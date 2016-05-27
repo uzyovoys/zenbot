@@ -10,9 +10,9 @@ It can contain:
 
 - [inputs](/botscript/input/)
 - [outputs](/botscript/output/)
-- general [patterns](/botscript/pattern/)
+- custom [patterns](/botscript/pattern/)
 - [variables](/botscript/var/)
-- get and post actions
+- [get](/botscript/get/) and [post](/botscript/post/) actions
 
 ## Summary
 Each context in the Botscript contains a part of dialog.
@@ -68,6 +68,8 @@ It is so because the root context is already extended and bot understands what w
 At the same time user of course can ask again "Tell me a forecast" - and bot will process it.
 
 {% include note.html text="Thus instead of final state machine paradigm, Zenbot continuously extends the root context for dialog branching implementation." %}
+
+Please read more about a context management in a [special chapter](/botscript/conversations/).
 
 ### Modal context
 Sometimes you need to give an exclusive priority for any context to catch next user\'s request ignoring the rest of root context.

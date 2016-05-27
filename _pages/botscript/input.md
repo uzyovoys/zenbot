@@ -11,7 +11,7 @@ It may contain:
 - input [patterns](/boscript/pattern/)
 - [outputs](/botscript/output/)
 - [variables](/botscript/var/)
-- get and post actions
+- [get](/botscript/get/) and [post](/botscript/post/) actions
 - nested [contexts](/botscript/context/)
 
 ## Summary
