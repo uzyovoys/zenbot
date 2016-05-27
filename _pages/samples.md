@@ -18,3 +18,11 @@ Then you can test the newly created bot through web console, [REST API](/rest/) 
 #### [Hello World](https://github.com/uzyovoys/zenbot/tree/master/samples/helloworld)
 A very simple bot which greets user by name or asks her about her name and stores it in the database for further usage.
 
+***
+
+#### [Reminders](https://github.com/uzyovoys/zenbot/tree/master/samples/reminders)
+This bot implements a flow of a new reminder creation.
+
+You can find here how to use an idea of [context referencing](/botscript/conversations/) and empty contexts.
+
+***
