@@ -36,7 +36,7 @@ Thus each context has an inner inputs with a set of patterns, and each of these 
 
       <input pattern="$Text">
         <var name="UserName" value="$Text" scope="user"/>
-        <output value="Nice to meet you $UserNAme!"/>
+        <output value="Nice to meet you $UserName!"/>
       </input>
     </context>
   </input>
