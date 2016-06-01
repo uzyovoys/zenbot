@@ -21,6 +21,35 @@ Then Zenbot converts each found entity to the appropriate format (number strings
 Without such mechanism like patterns we have to define a long list of possible user\'s inputs, so bot could find similarity between user\'s text input and one of defined input which bot can understand.
 Imagine such list for all variations of time or date: "Today", "Tomorrow", "This friday", "Last monday", "October 22nd"... Well, it is far from what we would like.
 
+### Entities extraction example
+Let\'s see how easily Zenbot extracts entities from the user\'s input and converts them to the language-independent items:
+
+```xml
+<context>
+  <input pattern="$Text {[$Date] [$Time]}" id="reminder">
+    <!-- $Text, $Date and $Time variables are available there -->
+  </input>
+</context>
+```
+
+If user says something like "Buy flowers tomorrow at 5pm", Zenbot will match this phrase through the input "reminder" and create a set of variables - `$Text`, `$Date` and `$Time`.
+Each of these variables will contain a language-independent data (`$Text` will contain a source text of course), so your bot\'s logic can operate with date and time of the reminder as with a regular variables.
+
+Thus `$Date` will be converted by Zenbot to the object with `day`, `month`, `year` and `date` fields:
+
+```json
+{
+  "day": 1,
+  "month": 5,
+  "year": 2016,
+  "date": 1464739200000,
+  "formatted": "2016-06-01"
+}
+```
+
+Your [custom patterns](/botscript/pattern/) will be converted to the mapped values.
+As well as [custom entities](/pattern/entities/).
+
 ## Pattern syntax
 Of course there should be a very flexible, powerful and simple syntax of such patterns to make it really fast to develop clever bots with pleasure.
 

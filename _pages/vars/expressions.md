@@ -97,6 +97,13 @@ Takes a string and returns the same string in lower case.
 
 ***
 
+#### cap
+Takes a string and returns the same string with first letter in the upper case.
+
+`cap("hello guys")` - returns "Hello guys"
+
+***
+
 #### len
 Takes a string or array and returns the length of string or array.
 
@@ -257,5 +264,10 @@ Takes a string and regular expression string and returns an array of strings of 
 Takes a JSON formatted string and tries to convert it to the object.
 
 `json("{ first: 1, second: 2 }")` - returns an object which has two fields (first and second).
+
+***
+
+#### dt
+Takes a Date and Time (or number of milliseconds and Time) and returns a number of milliseconds of datetime composed from these arguments.
 
 ***

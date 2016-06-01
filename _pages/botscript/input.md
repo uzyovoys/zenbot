@@ -82,4 +82,4 @@ Use this attribute to define pattern if you input contains only one pattern and 
 ### **id** attribute
 You can define some non unique identifier for any input to have knowledge about what particular input was matched.
 
-{% include note.html text="This is useful only if you work with Zenbot's REST API." %}
+{% include note.html text="This attribute is useful only if you connect your bot with Telegram Botan analytics service or if you work with Zenbot's REST API." %}

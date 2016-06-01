@@ -20,3 +20,14 @@ Your bot will respond with text responses regarding the [Botscript](/botscript/)
 
 Note that telegram can also interpret HTML tags in responses.
 Thus your bot can respond with HTML links and Telegram will load snippets of web pages on fly in chat window.
+
+## Botan analytics
+Zenbot currently supports a [Botan analytics](http://botan.io/) service API to track your Telegram bot\'s statistics.
+
+This service enables your bot to store it\'s analytics data automatically for each user\'s request.
+Further you can track bot\'s metrics through a [special Botan bot](https://telegram.me/Botaniobot?start=src%3Dbotanio) in Telegram.
+
+To enable Botan integration for your bot, just obtain a Botan token and provide it through the [web console](https://zenbot.org) in the "Telegram settings" section.
+
+{% include note.html text="Note that Zenbot will track only identifiers of inputs.
+So if the matched input has not an \"id\" attribute, it will not be tracked." %}
