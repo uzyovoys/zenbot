@@ -44,9 +44,13 @@ You have to pass the next set of parameters in your requests to REST API:
 #### text
 The text of request. **Required for each request.**
 
+***
+
 #### lang
 A string code of request\'s language.
 Zenbot will detect the language of request automatically, but you can overwrite this value by this parameter.
+
+***
 
 #### user
 A unique user\'s identifier in your system.
@@ -54,6 +58,8 @@ This id will be used by Zenbot to manage current user\'s state.
 
 {% include note.html text="This parameter is required if you wish Zenbot to manage the user's state on Zenbot's side.
 Otherwise you have to store and manage user's state on your side." %}
+
+***
 
 #### context
 Identifier of current context to process this request.
@@ -65,25 +71,31 @@ Thus Zenbot will restore the current context from user\'s state automatically.
 
 _You can obtain the current context\'s ID from the response._
 
+***
+
 #### modal
 You can pass there _true_ or _false_ to define current context modality.
 
 It is an optional parameter.
 
+***
+
 #### timestamp
-The current user\'s datetime in UNIX timestamp format (a number of milliseconds from January 1th 1970).
+The current user\'s datetime in timestamp format (a number of milliseconds from January 1st 1970).
 
 Pass this parameter if your bot has a deal with dates and times, so it could resolve relative dates and times.
 
 For instance your bot may work with such phrases as "Wake me up in 15 minutes" or "Remind about this next monday".
 Zenbot has to format output regarding current user\'s datetime.
 
+***
+
 #### offset
 The current user\'s time GMT offset in minutes. **Signed integer**
 
 Pass this parameter if your bot has a deal with dates and times, so it could resolve relative dates and times.
 
-{% include note.html text="Both last parameters should go together." %}
+***
 
 #### ll
 The current user\'s geo position in string format _latitude,longitude_.
@@ -92,6 +104,8 @@ Pass this parameter if your bot has a deal with some geo-related tasks.
 
 You also can pass this parameter instead of _timestamp_ and _offset_.
 Zenbot will obtain current time and offset by latitude and longitude automatically.
+
+***
 
 ## POST method
 If you plan to manage user\'s state on your side or wish to rewrite some variables, please use POST requests with next format:
