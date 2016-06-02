@@ -177,6 +177,8 @@ Please read more details about variables usage in [var tag chapter](/botscript/v
 Zenbot provides a set of global variables for each request.
 Each of them has "req_" prefix so that you can easily distinguish it from a regular variables.
 
+- **req_bot_id** - the identifier of your bot
+- **req_bot_name** - your bot\'s name
 - **req_text** - a source text of user\'s request (string)
 - **req_score** - matching score (float number)
 - **req_lang** - request\'s language code (string)
