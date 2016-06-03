@@ -27,7 +27,7 @@ You can find here how to use an idea of [context referencing](/botscript/convers
 
 ***
 
-#### Doit bot
+#### [Doit bot](https://doitbot.netlify.com)
 You find the production version of the previous sample [here](https://doitbot.netlify.com).
 
 This simple bot creates reminders for user and notifies her through the messenger.
