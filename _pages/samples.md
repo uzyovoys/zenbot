@@ -26,3 +26,13 @@ This bot implements a flow of a new reminder creation.
 You can find here how to use an idea of [context referencing](/botscript/conversations/) and empty contexts.
 
 ***
+
+#### Doit bot
+You find the production version of the previous sample [here](https://doitbot.netlify.com).
+
+This simple bot creates reminders for user and notifies her through the messenger.
+It also utilizes such Zenbot\'s tools like [custom entities](/pattern/entities/) and HTTP actions.
+
+{% include note.html text="This bot works well with English and Russian languages under both Telegram and Slack messengers." %}
+
+***

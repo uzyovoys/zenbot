@@ -58,6 +58,9 @@ As a result this pattern will return a value like this:
 {
   "hour": 5, "minute": 0, "second": 0,
   "part": "PM",
+  "relative": false,
   "formatted": "17:00:00"
 }
 ```
+
+`relative` fields tells if this time object was constructed from relative form phrase like "In 2 minutes".
