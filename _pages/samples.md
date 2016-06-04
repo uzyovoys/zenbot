@@ -36,3 +36,12 @@ It also utilizes such Zenbot\'s tools like [custom entities](/pattern/entities/)
 {% include note.html text="This bot works well with English and Russian languages under both Telegram and Slack messengers." %}
 
 ***
+
+#### [Weather](https://github.com/uzyovoys/zenbot/tree/master/samples/weather)
+This sample illustrates the usage of [Custom Entities](/pattern/entities/) and [context management](/botscript/conversations/).
+
+Note that you have to upload _cities_ entity CSV before you can test this bot.
+
+Then you can ask it about weather in different cities and dates.
+
+***
