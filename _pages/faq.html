@@ -46,24 +46,29 @@ permalink: /faq/
     <p>But some of general concepts (like Numbers, Date and Time handling) are built in Zenbot and support only a particular set of languages, such as English and Russian.</p>
     <p>All of them are open source and you can contribute to and extend these items with your language as well.</p>
 
-    <h3 id="12">What are the Differences between Zenbot and Wit.ai?</h3>
-    <p>There are three major differences between Zenbot and Wit.ai:</p>
+    <h3 id="12">What are the Differences between Zenbot and other platforms?</h3>
     <ul>
         <li>
             <p>Zenbot implements a full stack of NLP techniques, not only user’s intent resolution.</p>
             <p>This means that you do not have to implement a user-to-machine conversation logic on your side.
-            Zenbot proceeds each request, manages contexts, performs actions, evaluates scripts, collects and stores variables and generates text output.
+            Zenbot proceeds each request, manages contexts of conversation, performs actions, evaluates scripts, collects and stores variables and generates output.
             Thus the client system just sends a text request and receives a complete response.</p>
         </li>
         <li>
-            <p>Zenbot is based on the pattern matching mechanism instead of deep learning "magic".</p>
-            <p>Pattern matching provides an NLP flexibility together with full control of the dialog system.
-            Thus Zenbot takes data already prepared by a human and works as expected.</p>
+            <p>Your conversational logic is encapsulated in the single place.</p>
+            <p>Thus you have not to distribute your code between the NLP service and your own application.
+            Moreover, with Zenbot you have not to use any external servers to create any conversational bot.
+            Zenbot even allows you to use Javascript on it's side to implement some complex logic inside the bot.</p>
         </li>
         <li>
-            <p>Zenbot doesn’t provide any web interface for dialog structure designing.</p>
+            <p>Zenbot is based on the well-known pattern matching mechanism, instead of machine learning "magic".</p>
+            <p>Pattern matching provides an NLP flexibility together with full control of the dialog system and easy to use entity extraction.
+            Thus Zenbot takes data which is already prepared by a human and works as expected.</p>
+        </li>
+        <li>
+            <p>Zenbot doesn’t provide any web interface for dialog structure building.</p>
             <p>Such web interfaces are often more confusing than useful if you deal with complex dialogs.
-            Thus Zenbot defines a simple XML file format where you can describe such a dialog and manage it as the source code for your bot.</p>
+            Thus Zenbot defines a simple XML file format where you can describe such a dialog and manage it as the source code of your bot through any version control system like Git.</p>
         </li>
     </ul>
 
@@ -93,7 +98,7 @@ permalink: /faq/
         <li><a href="#9">How to use Zenbot from my application or website?</a></li>
         <li><a href="#10">How to integrate Zenbot with my Facebook, Slack or Telegram bot?</a></li>
         <li><a href="#11">Which languages are supported?</a></li>
-        <li><a href="#12">What are the differences between Zenbot and Wit.ai?</a></li>
+        <li><a href="#12">What are the Differences between Zenbot and other platforms?</a></li>
         <li><a href="#13">What are the differences between Zenbot and AIML?</a></li>
     </ul>
 </div>
