@@ -1,16 +1,16 @@
 <context>
     <input pattern="(hi|hello) *">
-        <!-- Greet user if we know her name -->
+        <!-- Greet the user if we know his/her name -->
         <output value="Hello $UserName!" if="full($UserName)"/>
 
-        <!-- Or activate an inner context to ask user about her name -->
-        <context if="empty($UserName)" modal="true"> <!-- We use modal context, so bot will recognize any text as user's name -->
+        <!-- Or activate an inner context to ask the user about his/her name -->
+        <context if="empty($UserName)" modal="true"> <!-- We use a modal context, so our bot will recognize any text as the user’s name -->
             <output value="Hi! What is your name?"/>
 
             <input pattern="$Text">
-                <!-- Store user's name in UserName variable with "user" scope to persist it in database -->
+                <!-- Store the user’s name in the UserName variable with "user" scope to save it into database -->
                 <var name="UserName" value="$Text" scope="user"/>
-                <output value="Nice to meet you $UserName!"/> <!-- Using placeholder in output -->
+                <output value="Nice to meet you, $UserName!"/> <!-- Using the placeholder in output -->
             </input>
         </context>
     </input>
