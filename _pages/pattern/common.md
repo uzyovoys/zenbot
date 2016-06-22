@@ -6,7 +6,7 @@ permalink: /pattern/common/
 
 There are a set of common custom patterns you can reuse in your patterns without need to implement them.
 
-{% include note.html text="Note that these common patters are available only for English and Russian.
+{% include note.html text="Note that these common patters are available only for English, Spanish and Russian.
 But feel free to contribute your custom patterns in our Github repository." %}
 
 ## Text
