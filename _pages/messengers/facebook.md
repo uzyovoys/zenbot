@@ -34,3 +34,8 @@ Zenbot will subscribe your app to the page automatically and will be ready to ca
 ## Test your Facebook bot
 Just open your app\'s Facebook page, click on "Messages" and send some messages.
 Your Zenbot\'s bot will reply with text regarding your [Botscript](/botscript/).
+
+## Start message
+Each time user presses "Start" button in Messenger client, your bot will receive "/start" message following by some payload it was provided.
+
+Thus you have to provide `/start $Text` input pattern in your Botscript if you need to response to the start command.

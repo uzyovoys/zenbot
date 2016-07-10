@@ -21,6 +21,16 @@ Your bot will respond with text responses regarding the [Botscript](/botscript/)
 Note that telegram can also interpret HTML tags in responses.
 Thus your bot can respond with HTML links and Telegram will load snippets of web pages on fly in chat window.
 
+## Start message
+Each time user presses "Start" button in Telegram messenger client, your bot will receive "/start" message following by some payload it was provided.
+
+Thus you have to provide `/start $Text` input pattern in your Botscript if you need to response to the start command.
+
+## Response formatting
+Please use a [Markdown formatting](https://core.telegram.org/bots/api#markdown-style) in each response of your bot if you wish to format a text with bold, italic, pre-formatted or insert any URL links.
+
+{% include note.html text="Note that you must enclose each URL link in [] and ()" %}
+
 ## Botan analytics
 Zenbot currently supports a [Botan analytics](http://botan.io/) service API to track your Telegram bot\'s statistics.
 
