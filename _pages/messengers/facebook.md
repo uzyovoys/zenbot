@@ -9,7 +9,7 @@ Moreover - you do not have to have an external hosting for your Facebook\'s chat
 
 {% include note.html text="Nevertheless you can host any of your chat bot related logic on your side and integrate it with Zenbot over REST API." %}
 
-## How to create Facebook chat bot
+## How to create a Facebook chat bot
 There is a [complete guide](https://developers.facebook.com/docs/messenger-platform/quickstart) on how to create chat bot for Facebook Messenger platform.
 
 Thus you have to create Facebook app and Facebook page or use existing one.
@@ -31,11 +31,14 @@ Zenbot will subscribe your app to the page automatically and will be ready to ca
 
 ![Zenbot Facebook settings](/img/facebook.png)
 
+## Start message
+Each time a user presses "Start" button in the Messenger\'s client, your bot receives a "/start" message following by some _optional payload_.
+
+Thus you have to define `/start $Text` input pattern in your Botscript if your bot has to send some response to the user if she clicks "Start" button.
+In this case `$Text` variable will contain _optional payload_ passed by "Start" button\'s "ref" param.
+
+Please read more about this on [Send-to-Messenger Plugin](https://developers.facebook.com/docs/messenger-platform/plugin-reference/send-to-messenger) page.
+
 ## Test your Facebook bot
 Just open your app\'s Facebook page, click on "Messages" and send some messages.
 Your Zenbot\'s bot will reply with text regarding your [Botscript](/botscript/).
-
-## Start message
-Each time user presses "Start" button in Messenger client, your bot will receive "/start" message following by some payload it was provided.
-
-Thus you have to provide `/start $Text` input pattern in your Botscript if you need to response to the start command.

@@ -6,7 +6,7 @@ permalink: /messengers/slack/
 
 Zenbot provides a [Slack]("https://slack.com/") integration, so that your Slack bot can easily start to talk with users on natural language.
 
-## How to create Slack bot
+## How to create a Slack bot
 There is a [complete guide](https://api.slack.com/bot-users) on how to create a Slack bot.
 You just need a couple of clicks to obtain your Slack bot\'s Token.
 

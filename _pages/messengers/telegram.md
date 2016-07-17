@@ -7,7 +7,7 @@ permalink: /messengers/telegram/
 Zenbot implements [Telegram](https://telegram.org) bot API, so you do not have to have an external hosting to make your natural language speaking bot for Telegram.
 Just provide your Telegram\'s bot Authorization token in Zenbot\'s bot settings, and it will start speaking with your users over Telegram.
 
-## How to create Telegram bot
+## How to create a Telegram bot
 There is a [complete guide](https://core.telegram.org/bots#3-how-do-i-create-a-bot) about how to create Telegram bot and obtain it\'s Authorization token.
 
 Just provide this token in your Zenbot\'s bot Telegram settings.
@@ -22,9 +22,10 @@ Note that telegram can also interpret HTML tags in responses.
 Thus your bot can respond with HTML links and Telegram will load snippets of web pages on fly in chat window.
 
 ## Start message
-Each time user presses "Start" button in Telegram messenger client, your bot will receive "/start" message following by some payload it was provided.
+Each time a user presses "Start" button in Telegram messenger client, your bot receives a "/start" message following by some _optional payload_.
 
-Thus you have to provide `/start $Text` input pattern in your Botscript if you need to response to the start command.
+If you would like you bot to react on such a message, just define a `/start $Text` input pattern in your Botscript.
+In this case `$Text` variable will contain an _optional payload_ passed by `/start` command to your bot via [deep linking](https://core.telegram.org/bots#deep-linking).
 
 ## Response formatting
 Please use a [Markdown formatting](https://core.telegram.org/bots/api#markdown-style) in each response of your bot if you wish to format a text with bold, italic, pre-formatted or insert any URL links.
