@@ -67,3 +67,4 @@ Each time Zenbot receives a request from Slack, it produces a set of special var
 
 - **req_slack_token** - the token of Slack bot
 - **req_slack_channel** - ID of the channel from where the request was sent
+- **req_slack_user** = ID of the user who has sent the request
