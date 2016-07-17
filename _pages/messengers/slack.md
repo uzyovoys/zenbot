@@ -16,22 +16,36 @@ Simply copy this token and paste it into "Slack settings" in your Zenbot\'s bot 
 
 {% include note.html text="Note that you do not have to install any webhooks for your Slack bot." %}
 
+## Slash commands
+Zenbot enables your bot react on any [Slash commands](https://api.slack.com/slash-commands) as well as regular messages.
+
+{% include note.html text="Slash commands allows the user to request your bot in any channel." %}
+
+To make it work just use a URL like `https://zenbot.org/api/slack/<your bot id>` as a URL for your slash command inside an "Integration Settings" section on the "Slash Commands" configuration page.
+
+In your Botscript define an input pattern which looks like `/<you slash command>`.
+For example, if you would like your bot to respond on a slash command like `/doit something`, you have to define an input pattern `/doit $Text`.
+
 ## Distribute your Slack bot
-If you plan to share your Slack bot, you have to create Slack application with bundled bot to distribute it to another teams.
+If you would like to share your Slack bot, you have to create **Slack application** with bundled bot to distribute it to another teams.
 [This guide](https://api.slack.com/slack-apps) completely describes this process.
 
+All you have to do - is to create Slack app in your Slack team account, provide **Redirect URI** and obtain **Client ID** and **Client Secret**.
+
 ### Redirect URI
-The application creation process requires you to define **Redirect URI** for OAuth authorization.
+The application creation process requires you to define a **Redirect URI** for OAuth authorization.
 
 Just paste here the URI which looks like `https://zenbot.org/api/slack/<your bot id>`.
 
+_You can find this URL on your bot\'s settings page in Zenbot web console._
+
 ### Client ID and Secret
-Once you have created your Slack application, you have to open "App Credentials" and copy your app\'s "Client ID" and "Client Secret" and paste them into appropriate fields in Zenbot\'s [web console](https://zenbot.org).
+Once you have created your Slack application, you have to open "App Credentials" and copy your app\'s "Client ID" and "Client Secret" and paste them into appropriate fields in your bot\'s setting page in in Zenbot\'s [web console](https://zenbot.org).
 
 {% include note.html text="Note that Zenbot cannot connect your bot with your Slack app before this step." %}
 
 ### Success and Error redirect URLs
-As you can see there are two more _optional_ fields in the "Slack settings" section.
+As you can see there are two more _optional_ fields inside the "Slack settings" section.
 There are "OAuth Success Redirect URL" and "OAuth Error Redirect URL".
 
 Once user has successfully installed your Slack app, Zenbot redirects her to the "OAuth Success Redirect URL".
