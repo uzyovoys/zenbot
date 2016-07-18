@@ -58,7 +58,7 @@ Otherwise Zenbot will show a page with error message." %}
 
 ## Test your Slack bot
 Now you can select your bot in Slack\'s contacts list and send a direct text message.
-Your Zenbot\'s bot will response with some text regarding the [Botscript](/botscript/).
+Your Zenbot\'s bot will respond with some text regarding the [Botscript](/botscript/).
 
 {% include note.html text="Note that you can use only direct messages to communicate with your bot." %}
 
