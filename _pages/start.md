@@ -9,7 +9,7 @@ Well, there was a good [introduction](/) and now it is time to get closer to Zen
 # What Is Zenbot
 Zenbot is an online _natural language processing_ (NLP) service and bot hosting.
 
-It allows you to add natural language interface to any application, website or chat bot for widely used messengers like Facebook, Slack and Telegram.
+It allows you to add natural language interface to any application, website or chat bot for widely used messengers like Facebook, Slack, Skype and Telegram.
 
 ## Natural Language Interface?
 Yep! າhe era of artificial intelligence and advanced human-to-computer interfaces is already here!
@@ -47,7 +47,7 @@ And moreover, Zenbot performs not only an NLP and AI stuff - it also allows you 
 ## Messengers Integration and REST API
 You can use Zenbot’s [REST API](/rest/) to post text requests from any of your apps or websites and get output.
 
-But moreover, Zenbot is already integrated with such popular messengers as [Facebook Messenger](/messengers/facebook/), [Slack](/messengers/slack/) and [Telegram](/messengers/telegram/)!
+But moreover, Zenbot is already integrated with such popular messengers as [Facebook Messenger](/messengers/facebook/), [Slack](/messengers/slack/), [Skype](/messengers/skype/) and [Telegram](/messengers/telegram/)!
 So you can easily spread your bot over these platforms to make your service available as a chat bot for millions of customers!
 
 {% include note.html text="And once again — you do not have to implement all these messengers API and host such implementation on external servers! Zenbot takes care about this for you. All you need is to provide settings for each messenger platform through Zenbot web console." %}
