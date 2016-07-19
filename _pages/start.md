@@ -47,7 +47,7 @@ And moreover, Zenbot performs not only an NLP and AI stuff - it also allows you 
 ## Messengers Integration and REST API
 You can use Zenbot’s [REST API](/rest/) to post text requests from any of your apps or websites and get output.
 
-But moreover, Zenbot is already integrated with such popular messengers as [Facebook Messenger](/messengers/facebook/), [Slack](/messengers/slack/), [Skype](/messengers/skype/) and [Telegram](/messengers/telegram/)!
+But moreover, Zenbot is already integrated with such popular messengers as [Facebook Messenger](/messengers/facebook/), [Slack](/messengers/slack/), [Skype](/messengers/skype/), [Telegram](/messengers/telegram/), [Kik](/messengers/kik/) and [WeChat](/messengers/wechat/)!
 So you can easily spread your bot over these platforms to make your service available as a chat bot for millions of customers!
 
 {% include note.html text="And once again — you do not have to implement all these messengers API and host such implementation on external servers! Zenbot takes care about this for you. All you need is to provide settings for each messenger platform through Zenbot web console." %}
