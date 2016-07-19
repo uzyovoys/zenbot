@@ -63,7 +63,7 @@ Your Zenbot\'s bot will respond with some text regarding the [Botscript](/botscr
 {% include note.html text="Note that you can use only direct messages to communicate with your bot." %}
 
 ## Variables
-Each time Zenbot receives a request from Slack, it produces a set of special variables.
+Each time Zenbot receives a request from Slack, it generates a set of special variables you can use inside a Botscript.
 
 - **req_slack_token** - the token of Slack bot
 - **req_slack_channel** - ID of the channel from where the request was sent
