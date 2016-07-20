@@ -48,3 +48,7 @@ Each time Zenbot receives a request from Telegram, it produces a set of special 
 
 - `req_telegram_token` - your Telegram bot Token
 - `req_telegram_chat` - current Telegram chat identifier
+
+## Restrictions
+Please note that Telegram doesn\'t provide any extended info about the user, like latitude and longitude, current time and GMT offset.
+Thus you have to obtain this data on your own if you need it.
