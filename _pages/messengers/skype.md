@@ -36,5 +36,5 @@ Your Zenbot\'s bot will respond with some text regarding the [Botscript](/botscr
 ## Variables
 Each time Zenbot receives a request from Skype, it produces a set of special variables.
 
-- **req_skype_user** - an ID of skype user
+- **req_skype_user** - an ID of Skype user
 - **req_skype_token** - Skype bot token
