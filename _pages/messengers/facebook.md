@@ -46,7 +46,7 @@ Your Zenbot\'s bot will reply with text regarding your [Botscript](/botscript/).
 ## Variables
 Each time Zenbot receives a request from Facebook Messenger, it generates a set of special variables you can use inside a Botscript.
 
-- **facebook_token** - a page token of the bot
-- **facebook_user_firstname** - user\'s first name
-- **facebook_user_lastname** - user\'s last name
-- **facebook_user_gender** - user\'s gender
+- **req_facebook_token** - a page token of the bot
+- **req_facebook_user_firstname** - user\'s first name
+- **req_facebook_user_lastname** - user\'s last name
+- **req_facebook_user_gender** - user\'s gender
