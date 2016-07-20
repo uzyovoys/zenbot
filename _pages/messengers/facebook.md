@@ -15,14 +15,17 @@ There is a [complete guide](https://developers.facebook.com/docs/messenger-platf
 Thus you have to create Facebook app and Facebook page or use existing one.
 
 ### Webhook
-When setting up a webhook, provide the next URL:
+When setting up a webhook, provide a URL like `https://zenbot.org/api/facebook/<id of your Zenbot bot here>`.
 
-`https://zenbot.org/api/facebook/<the key of your bot>`
+_You can see this URL in Zenbot web console._
 
 Zenbot already implements everything your bot needs to validate a webhook and catch up messages from users.
 
 {% include note.html text="Note that before setting up a webhook you have to select any Verify Token and provide it inside your bot settings.
-Only after this setting is saved you can verify and save webhook in the Facebook's app settings console." %}
+Only if this setting is saved you can verify and save webhook in the Facebook's app settings console." %}
+
+### Subscription Fields
+You have to check "messages", "messaging_optins" and "messaging_postbacks" to make your bot receive messages from Facebook Messenger.
 
 ### Page Access Token
 Generate your page Access Token and provide it inside your bot\'s settings.
