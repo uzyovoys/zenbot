@@ -67,9 +67,8 @@ Each time Zenbot receives a request from Slack, it generates a set of special va
 
 - **req_slack_token** - the token of Slack bot
 - **req_slack_channel** - ID of the channel from where the request was sent
+- **req_slack_team** - ID of the team from where the request was sent
 - **req_slack_user** - ID of the user who has sent the request
 - **req_slack_username** - user\'s name
 - **req_slack_username_real** - user\'s real name
 - **req_slack_usermail** - user\'s email address
-- **req_slack_team** - ID of user\'s team
-- **req_slack_teamname** - the name of team
