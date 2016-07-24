@@ -56,6 +56,12 @@ You _can_ define your own URLs for this, otherwise Zenbot will use default URLs.
 {% include note.html text="Thus in the case of successful installation Zenbot will redirect user to the Slack web client page.
 Otherwise Zenbot will show a page with error message." %}
 
+### OAuth Scopes
+Once you decided to share your Slack bot with others, you have to pay attention to [OAuth Scopes](https://api.slack.com/docs/oauth-scopes) in Slack.
+
+If your bot is not actually a "bot" in terms of Slack (but a Slack app instead), then you have to check that your [Slack Button](https://api.slack.com/docs/slack-button) contains `users:read` access scope.
+Because Zenbot has to obtain some user\'s data for each request (like time offset, real name and email address).
+
 ## Test your Slack bot
 Now you can select your bot in Slack\'s contacts list and send a direct text message.
 Your Zenbot\'s bot will respond with some text regarding the [Botscript](/botscript/).
