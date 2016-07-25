@@ -62,6 +62,13 @@ Once you decided to share your Slack bot with others, you have to pay attention 
 If your bot is not actually a "bot" in terms of Slack (but a Slack app instead), then you have to check that your [Slack Button](https://api.slack.com/docs/slack-button) contains `users:read` access scope.
 Because Zenbot has to obtain some user\'s data for each request (like time offset, real name and email address).
 
+## Message Formatting
+Note that you can also use Slack\'s [Message Formatting](https://api.slack.com/docs/message-formatting) for complex responses.
+As well as [Attachments](https://api.slack.com/docs/message-attachments) and plain text (of course).
+
+Zenbot will automatically understand your bot\'s response format and generate an appropriate request to the Slack\'s API.
+_You have not to worry about this anymore._
+
 ## Test your Slack bot
 Now you can select your bot in Slack\'s contacts list and send a direct text message.
 Your Zenbot\'s bot will respond with some text regarding the [Botscript](/botscript/).
