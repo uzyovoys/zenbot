@@ -12,6 +12,9 @@ Thus we provide such samples in our [Github repository](https://github.com/uzyov
 Just fork this repository, create your test bot through [Zenbot web console](https://zenbot.org) and upload sample\'s Botscript.
 Then you can test the newly created bot through web console, [REST API](/rest/) or even messengers like [Facebook Messenger](/messengers/facebook/), [Slack](/messengers/slack/) or [Telegram](/messengers/telegram/).
 
+### Zenhub
+[Zenhub website](http://hub.zenbot.org) contains a collection of production ready bots for different channels like Slack and Telegram which are powered by Zenbot platform.
+
 ### Samples
 ***
 
@@ -27,8 +30,8 @@ You can find here how to use an idea of [context referencing](/botscript/convers
 
 ***
 
-#### [Doit bot](https://doitbot.netlify.com)
-You find the production version of the previous sample [here](https://doitbot.netlify.com).
+#### [Doit bot](http://hub.zenbot.org/doitbot)
+You find the production version of the previous sample [here](http://hub.zenbot.org/doitbot).
 
 This simple bot creates reminders for user and notifies her through the messenger.
 It also utilizes such Zenbot\'s tools like [custom entities](/pattern/entities/) and HTTP actions.
