@@ -12,8 +12,6 @@ You just need a couple of clicks to obtain your Slack bot\'s Token.
 
 Simply copy this token and paste it into "Slack settings" in your Zenbot\'s bot settings.
 
-![Slack settings](/img/slack.png)
-
 {% include note.html text="Note that you do not have to install any webhooks for your Slack bot." %}
 
 ## Slash commands

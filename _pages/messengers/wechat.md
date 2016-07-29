@@ -21,8 +21,6 @@ _You can see this URL in "WeChat Settings" section in Zenbot web console._
 ### WeChat bot Token
 Paste your WeChat bot token in "WeChat settings" section in Zenbot web console and press "Save settings" button.
 
-![WeChat settings](/img/wechat.png)
-
 ## Test your WeChat bot
 Now you can send some text requests though a WeChat client to your bot and receive responses from Zenbot regarding a Botscript.
 

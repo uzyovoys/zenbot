@@ -32,8 +32,6 @@ Generate your page Access Token and provide it inside your bot\'s settings.
 
 Zenbot will subscribe your app to the page automatically and will be ready to catch text requests from users over your Facebook app.
 
-![Zenbot Facebook settings](/img/facebook.png)
-
 ## Start message
 Each time a user presses "Start" button in the Messenger\'s client, your bot receives a "/start" message following by some _optional payload_.
 

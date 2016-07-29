@@ -27,8 +27,6 @@ Save previously obtained App ID and Password in your bot\'s settings in Zenbot w
 
 Just copy your App ID and paste it to **Client ID** and Password to **Client Secret**, and press Save button.
 
-![Zenbot Skype settings](/img/skype.png)
-
 ## Test you Skype bot
 Add your newly created Skype bot to your Skype list. Now you can select your bot in Skype\'s contacts list and send a direct text message.
 Your Zenbot\'s bot will respond with some text regarding the [Botscript](/botscript/).

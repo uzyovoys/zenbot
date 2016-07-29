@@ -12,8 +12,6 @@ There is a [complete guide](https://core.telegram.org/bots#3-how-do-i-create-a-b
 
 Just provide this token in your Zenbot\'s bot Telegram settings.
 
-![Telegram settings](/img/telegram.png)
-
 ## Test your Telegram bot
 Select your bot in Telegram and send a text message.
 Your bot will respond with text responses regarding the [Botscript](/botscript/).

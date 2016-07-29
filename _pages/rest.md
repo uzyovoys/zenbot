@@ -14,12 +14,11 @@ Thus Zenbot provides a REST API, so you can easily integrate your project with y
 There is a single endpoint of Zenbot REST API.
 You can find it under "General settings" section of your bot in the Zenbot\'s [web console](https://zenbot.org):
 
-![Zenbot web console](/img/rest.png)
-
-{% include note.html text="Such URL ends with a unique key of your bot." %}
+{% include note.html text="This URL ends with a unique key of your bot." %}
 
 ## Test area
 In the [web console](https://zenbot.org) you also can find a Test area for each of your bots to send test requests and see REST API response.
+Just click on the "Test this bot" button in the right upper corner.
 
 ## Methods
 You can use GET and POST methods to communicate with this endpoint.

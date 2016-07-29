@@ -13,8 +13,6 @@ Just perform all related steps and provide the bot\'s **Username** and obtain an
 ### Setup Username and API Key
 In Zenbot web console go to the "Kik Settings" section and provide previously obtained **Username** and **API Key** of your Kik bot.
 
-![Kik settings](/img/kik.png)
-
 Press "Save settings" button, and that is all!
 Now your Kik bot can receive text requests and respond regarding your Botscript in Zenbot.
 
