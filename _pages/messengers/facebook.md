@@ -32,13 +32,36 @@ Generate your page Access Token and provide it inside your bot\'s settings.
 
 Zenbot will subscribe your app to the page automatically and will be ready to catch text requests from users over your Facebook app.
 
-## Start message
-Each time a user presses "Start" button in the Messenger\'s client, your bot receives a "/start" message following by some _optional payload_.
+## Get Started Button
+You can enable "Get Started Button" in the bot\'s preferences to allow user to start your bot by pressing a special button the first time. 
+This enables your bot to process some initial dialog with the user.
 
-Thus you have to define `/start $Text` input pattern in your Botscript if your bot has to send some response to the user if she clicks "Start" button.
-In this case `$Text` variable will contain _optional payload_ passed by "Start" button\'s "ref" param.
+Each time the user clicks this button your bot will receive some text input and can generate any response as for regular input. 
+The default text command is **/start** but you can change it on the configuration page in Zenbot\'s web console.
+Thus you have to define `/start` (or any other) input pattern in your Botscript to handle this and generate some output. 
 
-Please read more about this on [Send-to-Messenger Plugin](https://developers.facebook.com/docs/messenger-platform/plugin-reference/send-to-messenger) page.
+{% include note.html text="Note that you have to enable Get Started Button in the Zenbot'\s web console" %}
+
+[Read more](https://developers.facebook.com/docs/messenger-platform/thread-settings/get-started-button) about Get Started button in the Facebook Messenger documentation.
+
+## Send to Messenger button
+Each time the user presses "Send to Messenger" button of your bot on any website, your bot receives a **/start** message following by some _optional payload_.
+
+Thus you have to define `/start $Text` input pattern in your Botscript if your bot has to send some response to the user if she clicks "Send to Messenger" button.
+In this case `$Text` variable will contain _optional payload_ passed by "Send to Messenger" button\'s "ref" param.
+
+Please read more on [Send-to-Messenger Plugin](https://developers.facebook.com/docs/messenger-platform/plugin-reference/send-to-messenger) page.
+
+## Persistent Menu
+Your bot can provide a persistent menu which contains a set of useful text commands or links to external websites.
+This menu is always available to the user in the bottom left corner of Messenger\'s client.
+Once the user taps on one of the menu items, Messenger sends a text command to your bot or opens an URL of website.
+
+You can easily build such menu in Zenbot\'s web console. Just provide the Label and Payload of each menu item and click "Save menu" button.
+Note that you can drag and drop items to re-order them.
+
+IF the Payload of a menu item contains a text command, it will be sent to your bot once the user clicks on this menu item.
+Thus you have to define a corresponding input pattern in your Botscript to handle this text command.
 
 ## Test your Facebook bot
 Just open your app\'s Facebook page, click on "Messages" and send some messages.
