@@ -10,6 +10,7 @@ It may contain:
 
 - input [patterns](/boscript/pattern/)
 - [outputs](/botscript/output/)
+- [samples](/botscript/sample/)
 - [variables](/botscript/var/)
 - [get](/botscript/get/) and [post](/botscript/post/) actions
 - nested [contexts](/botscript/context/)
@@ -72,12 +73,30 @@ In this particular example each text will be interpreted as a user\'s name.
 
 Zenbot goes inside the matched input and performs all it\'s actions: saves variable "UserName" and generates a greeting text output.
 
-We define an empty context inside this input because we want to switch to the root context manually, so that a next request will not be interpreted as a user\'s name again.
+We defined an empty context inside this input because we want to switch to the root context manually, so that a next request will not be interpreted as a user\'s name again.
+
+## Multiple patterns
+In the example above you can see an _input_ tag with single pattern defined through a _pattern_ attribute.
+It is a one-liner syntax which saves some piece of code if there is only one simple pattern involved.
+
+Of course you can define as many patterns as you need in each _input_ tag:
+
+```xml
+<input id="color">
+  <pattern value="(green|blue|red)"/>
+  <pattern value="(yellow|grey|white)"/>
+  ...
+</input>
+```
+
+In this case Zenbot will compose all nested pattern tags to build a single one behind the scene.
+But your Botscript will look much more readable.
 
 ## Attributes
 
 ### **pattern** attribute
-Use this attribute to define pattern if you input contains only one pattern and you would like to save XML file\'s space.
+Use this attribute to define pattern if your input contains only one simple pattern and you would like to save XML file\'s space.
+Use inner [pattern](/botscript/pattern/) tags otherwise.
 
 ### **id** attribute
 You can define some non unique identifier for any input to have knowledge about what particular input was matched.

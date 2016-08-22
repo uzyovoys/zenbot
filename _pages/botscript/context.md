@@ -10,6 +10,7 @@ It can contain:
 
 - [inputs](/botscript/input/)
 - [outputs](/botscript/output/)
+- [samples](/botscript/sample/)
 - custom [patterns](/botscript/pattern/)
 - [variables](/botscript/var/)
 - [get](/botscript/get/) and [post](/botscript/post/) actions

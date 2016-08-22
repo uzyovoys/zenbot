@@ -150,6 +150,31 @@ Thus your bot will respond as a human - with different phrases on the same reque
 
 Read more about output tag in [this chapter](/botscript/output/).
 
+### Samples
+Your bot can also respond with a set of samples which can be rendered as buttons by the particular messenger (like Facebook Messenger, Slack an etc.)
+This tag helps to generate such set of buttons with a simple lines:
+
+```xml
+<input pattern="(hi|hello) *">
+  <output value="Hi! What is your favorite color?"/>
+
+  <context>
+    <sample>
+      <item>Green</item>
+      <item>Blue</item>
+      <item>Red</item>
+    </sample>
+    <input pattern="* $Color *">
+      <output value="Nice! I like it too!"/>
+    </input>
+  </context>
+</input>
+```
+
+Once the user clicks one of the rendered buttons, your bot will receive a text of this button as a regular input, as if the user has typed it manually.
+
+Please read more about sample tag in [this cahpter](/botscript/sample/).
+
 # Other Botscript\'s features
 Of course Botscript provides much more features like [variables](/botscript/var/), [custom entities](/pattern/entities/), HTTP [GET](/botscript/get/) and [POST](/botscript/post/) requests and even [Javascript code evaluation](/vars/javascript/).
 You can read about all of them the corresponding chapters.
