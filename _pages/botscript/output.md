@@ -83,7 +83,7 @@ You can generate any output you wish with _output_ tag.
 But sometimes you may wish to generate an output in format specified for the particular channel (like Facebook Messenger, Telegram. Slack and others).
 In this case you can define such specific output regarding the documentation of the particular messenger and Zenbot will propagate such response as is in the response.
 
-Thus you can use all features of the particular platform. For example:
+Thus you can use all features of the particular platform. For example to generate Facebook Messenger\'s output with image, title, subtitle and button you can define:
 
 ```xml
 <output channel="facebook">
@@ -117,7 +117,7 @@ Thus you can use all features of the particular platform. For example:
 </output>
 ```
 
-In this particular example the Facebook-related output ha been defined with output format regarding the [Facebook Messenger Platform documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/generic-template).
+In this particular example the Facebook-related output has been defined with output format regarding the [Facebook Messenger Platform documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/generic-template).
 Zenbot will replace all placeholders it such response and generate proper JSON, so you can use all Facebook-related features like attachments, templates and etc.
 
 ## Inline definition
