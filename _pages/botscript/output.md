@@ -78,6 +78,48 @@ If you have to define only one response, you can write content right in the body
 </output>
 ```
 
+### Native output
+You can generate any output you wish with _output_ tag.
+But sometimes you may wish to generate an output in format specified for the particular channel (like Facebook Messenger, Telegram. Slack and others).
+In this case you can define such specific output regarding the documentation of the particular messenger and Zenbot will propagate such response as is in the response.
+
+Thus you can use all features of the particular platform. For example:
+
+```xml
+<output channel="facebook">
+  <![CDATA[
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements":[
+          {
+            "title":"Welcome $UserName",
+            "image_url":"http://petersapparel.parseapp.com/img/item100-thumb.png",
+            "subtitle":"Nice yo see you again!",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://petersapparel.parseapp.com/view_item?item_id=100",
+                "title":"View Website"
+              },
+              {
+                "type":"postback",
+                "title":"Start Chatting",
+                "payload":"USER_DEFINED_PAYLOAD"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]]>
+</output>
+```
+
+In this particular example the Facebook-related output ha been defined with output format regarding the [Facebook Messenger Platform documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/generic-template).
+Zenbot will replace all placeholders it such response and generate proper JSON, so you can use all Facebook-related features like attachments, templates and etc.
+
 ## Inline definition
 You can save your Botscript file\'s space if a particular output has only one text to return.
 Just use _value_ attribute instead of nested _item_ tags.
