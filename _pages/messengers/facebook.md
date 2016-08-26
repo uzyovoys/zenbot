@@ -9,6 +9,31 @@ Moreover - you do not have to have an external hosting for your Facebook\'s chat
 
 {% include note.html text="Nevertheless you can host any of your chat bot related logic on your side and integrate it with Zenbot over REST API." %}
 
+## Bots in Facebook
+Strictly speaking a bot in Facebook - is just a Facebook Page connected to Facebook App.
+Each time the user sends a message to such a page, connected app receives request and responds with some automated response.
+
+Thus you have to create a page and connect it to Zenbot. And there are two ways to do it - via your own Facebook App or via Zenbot App.
+
+### Connect via Zenbot
+**This is the most quick and easy way to publish your bot in Facebook.**
+
+In this case you don\'t need to create a Facebook App, configure it, write descriptions, and finally - you don\'t need to pass through a [Facebook App review](https://developers.facebook.com/docs/messenger-platform/app-review) process before you bot becomes available for millions.
+
+{% include note.html text="An app review is complicated process which takes up to 5 business days and requires you to provide a lot of data including descriptions, icons, screen cast, commands list and a set of required API scopes." %}
+
+That is why Zenbot provides it\'s own Facebook App which can be easily used by your Facebook Page to publish your own bot.
+All you need to do - is to sign in with your Facebook account in Zenbot\'s web console and select one of your Facebook pages (or [create a new page](https://www.facebook.com/pages/create/)).
+
+After that you have to click "Connect" button and **that is it!**
+You have published your bot in three clicks without any app review and comlicated settings.
+
+### Connect via your App
+If you would like to use your own Facebook App to connect it to your bot, you have to create an app and provide page access token and verification token in Zenbot\'s web console.
+_See details below_.
+
+{% include note.html text="Please note that in this case you have to pass through an app review process in Facebook" %}
+
 ## How to create a Facebook chat bot
 There is a [complete guide](https://developers.facebook.com/docs/messenger-platform/quickstart) on how to create chat bot for Facebook Messenger platform.
 
