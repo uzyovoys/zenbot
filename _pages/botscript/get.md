@@ -63,8 +63,12 @@ But this solution requires to create an external variable.
 
 {% include note.html text="Note that you should not use $ symbol before variable name when you use Javascript expressions." %}
 
-## Non JSON response
-Of course you can make requests to the external services which respond with non JSON responses.
+## XML response
+If an endpoint returns XML-formatted response (like RSS for example), Zenbot will parse it automatically and create an object with fields corresponding to the structure of XML.
+Thus you don\'t need to parse it on your own as in case with JSON response.
+
+## Raw response
+Of course you can make requests to the external services which respond with non JSON or XML responses.
 In such case Zenbot will store a _raw body of response_ in the defined variable.
 
 There are a set of useful functions to work with such responses, like CSS selector and HTML attributes extractor.
