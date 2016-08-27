@@ -204,3 +204,6 @@ Otherwise this variable will be skipped.
 
 ### **lang** attribute
 Define user\'s request language code if you would like this variable to be evaluated only for particular language.
+
+### **channel** attribute
+Define channel IDs here to create this variable only for requests from the particular messengers.

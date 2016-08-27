@@ -107,3 +107,6 @@ Otherwise this request will be skipped.
 
 ### **lang** attribute
 Define user\'s request language code if this action should be performed only for the particular language.
+
+### **channel** attribute
+Define channel IDs here to make an HTTP call only for requests from the particular messengers.
