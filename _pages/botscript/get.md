@@ -1,22 +1,22 @@
 ---
 layout: default
-title: get tag
+title: The Get Tag
 permalink: /botscript/get/
 ---
 
-This tag describes a HTTP GET request action and a variable name for response.
+This tag describes an HTTP GET request action and a variable name for the response.
 
 This tag may contain:
 
-- a set of HTTP params
-- a set of HTTP headers
+- A set of HTTP parameters
+- A set of HTTP headers
 
 ## Summary
 Zenbot is more than a pattern matcher.
-It enables you to perform a common actions to implement natural language interface.
+It allows you to perform common actions to implement natural language interface.
 HTTP request is one of such actions.
 
-You can request any HTTP service to fetch some data and store it into named variable.
+You can request any HTTP service to fetch some data and store it into a named variable.
 
 ```xml
 <input pattern="* (weather|forecast)">
@@ -32,27 +32,27 @@ You can request any HTTP service to fetch some data and store it into named vari
 ```
 
 The example above shows the usage of this tag.
-You have to provide a _url_ and _var_ attributes to make a request and store a response.
-And also provide optional set of HTTP parameters and headers.
+You have to provide _url_ and _var_ attributes to make a request and store a response.
+You can also provide optional set of HTTP parameters and headers.
 
-Zenbot will perform a request and store it\'s result into variable with name defined in the _var_ attribute.
+Zenbot will perform the request and store its result into the variable with the name defined in the _var_ attribute.
 
 {% include note.html text="Note that this variable will have an input scope." %}
 
-Further you can perform some stuff with this variable while it is a [regular variable](/botscript/var/).
+Then you can perform some stuff with this variable while it is a [regular variable](/botscript/var/).
 
-## JSON response
-Zenbot knows that often we will have deal with a REST APIs of different external services.
-So it will look in the response before storing it and try to parse it.
+## JSON Responses
+Zenbot knows that often we will deal with REST APIs of different external services.
+So it will look at the response before storing it and try to parse it.
 
-Thus a JSON formatted response will be automatically converted to the object or array.
+Thus a JSON formatted response will be automatically converted to an object or an array.
 And you can perform some operations with it as with a regular object or array.
 
 The example above shows how you can extract particular fields righ inside an [output](/botscript/output/) tag using [expressions](/expressions/).
-It uses a _get_ function to extract the "temp" field from JSON object, which is a result of extracting the "main" field from HTTP response.
-Well, such chained usage of the single function enables you to obtain any data from JSON response.
+It uses the _get_ function to extract the "temp" field from JSON object that is a result of extracting the "main" field from the HTTP response.
+Well, such chained usage of the single function allows you to obtain any data from a JSON response.
 
-You could also use a Javascript expression to make the same stuff in common way:
+You could also use a Javascript expression to perform the same stuff in a common way:
 
 ```xml
 <var name="Temp" value="javascript: Weather.main.temp"/>
@@ -61,52 +61,52 @@ You could also use a Javascript expression to make the same stuff in common way:
 
 But this solution requires to create an external variable.
 
-{% include note.html text="Note that you should not use $ symbol before variable name when you use Javascript expressions." %}
+{% include note.html text="Note that you should not use a $ character before variable name when you use Javascript expressions." %}
 
-## XML response
-If an endpoint returns XML-formatted response (like RSS for example), Zenbot will parse it automatically and create an object with fields corresponding to the structure of XML.
-Thus you don\'t need to parse it on your own as in case with JSON response.
+## XML Responses
+If the endpoint returns an XML formatted response (like RSS for example), Zenbot will parse it automatically and create an object with fields corresponding to the XML structure.
+Thus you don’t need to parse it on your own, unlike a response.
 
-## Raw response
-Of course you can make requests to the external services which respond with non JSON or XML responses.
-In such case Zenbot will store a _raw body of response_ in the defined variable.
+## Raw Responses
+Of course you can make requests to external services which don’t give JSON or XML responses.
+In such case Zenbot will store a _raw response body_ in the defined variable.
 
 There are a set of useful functions to work with such responses, like CSS selector and HTML attributes extractor.
-Read more about these functions in the [special chapter](/expressions/).
+Read more about these functions in a [dedicated chapter](/expressions/).
 
 ## Timeouts
-Zenbot wouldn\'t wait too much. So it uses HTTP response timeout about 15 seconds.
+Zenbot wouldn’t wait too much. So it uses HTTP response timeout about 15 seconds.
 
 ## Parameters and headers
-You can define a set of HTTP request\'s parameters and headers inside the get tag.
+You can define a set of HTTP request parameters and headers inside the `get` tag.
 
-### **param** tag
+### **Param** tag
 Use this inner tag to define a request parameter.
 
-It should contain a _name_ and _value_ attributes.
+It should contain _name_ and _value_ attributes.
 
 ### **header** tag
-Define a set of optional headers inside a _get_ tag if you need.
+Define a set of optional headers inside a `get` tag if you need.
 
-Each _header_ tag should contain a _name_ and _value_ attributes.
+Each `header` tag should contain _name_ and _value_ attributes.
 
 ## Attributes
 
-### **url** attribute
+### The **url** Attribute
 Define the URL of the external service in this required attribute.
 
-**Do not provide the parameters set inside it.** Please use an inner _param_ tags for this purpose.
+**Do not provide parameters inside this tag.** Please use inner `param` tags for this purpose.
 
-### **var** attribute
-Define a name of [variable](/botscript/var/) to save the response in for this request. It is required attribute.
+### **Var** Attribute
+Define the name for a [variable](/botscript/var/) to save the response in for this request. It is a required attribute.
 
-### **if** attribute
-You can define a condition (using [expressions](/vars/expressions/)) which will be performed to check if Zenbot should execute a request.
-If such condition is defined, Zenbot will previously evaluate it and if it returns 1 Zenbot will perform request.
+### **If** Attribute
+You can define a condition (using [expressions](/vars/expressions/)) that will check if Zenbot should execute the request.
+If such condition is defined, Zenbot first will evaluate it and, if it returns `1`, Zenbot will perform the request.
 Otherwise this request will be skipped.
 
-### **lang** attribute
-Define user\'s request language code if this action should be performed only for the particular language.
+### **Lang** Attribute
+Define the user request language code if this action should be performed only for the particular language.
 
-### **channel** attribute
+### **channel** Attribute
 Define channel IDs here to make an HTTP call only for requests from the particular messengers.

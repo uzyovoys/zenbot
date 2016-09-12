@@ -1,36 +1,36 @@
 ---
 layout: default
-title: Context management
+title: Context Management
 permalink: /botscript/conversations/
 ---
 
-Zenbot enables you not only to match user\'s input through a set of defined [patterns](/pattern/matching/).
-It also provides you a way to make your bot more conversational by _context management tricks_.
+Zenbot allows you not only to match user’s input through a set of defined [patterns](/pattern/matching/).
+It also provides you with a way to make your bot more conversational by _context management tricks_.
 
 ## Contexts
-Context is one of the core Zenbot\'s concepts which allows a Botscript\'s developer to manage a text conversation with end user.
+A context is one of the core Zenbot concepts which allows a Botscript developer to manage a text conversation with the end user.
 
-> Thus we can understand a context like a set of currently active set of patterns which our bot must understand in the particular moment.
+> Thus we can understand a context like a set of currently active set of patterns which our bot must understand in a particular moment.
 
-Once user has asked about weather, she would ask "And what about tomorrow?" or "In Singapore?" in the following request.
-Thus our bot must understand such sequences of requests to perform tasks in the _conversational_ manner.
+If, say, our user asked about current weather, he/she could ask "And what about tomorrow?" or "And in Singapore?" in the following request.
+Thus our bot must understand such request sequences to perform tasks in the _conversational_ manner.
 
-{% include note.html text="Note than phrase like \"In Singapore?\" doesn't have any meaning while user didnt't ask about weather previously." %}
+{% include note.html text="Note that a phrase like \"And in Singapore?\" has no meaning if user didn’t't ask about weather previously." %}
 
-## Context management tools
+## Context Management Tools
 Each context is described in the [Botscript](/botscript/) through the [context tag](/botscript/context).
 
-Thus each context has an inner inputs with a set of patterns, and each of these inputs can contain a set of inner contexts, which can extend a root once an input is activated by user\'s phrase.
+Thus each context has inner inputs with a set of patterns, and each of these inputs can contain a set of inner contexts, which can extend the root context once an input is activated by the user’s phrase.
 
 ```xml
-<context> <!-- Root context -->
+<context> <!-- The root context -->
   <input id="greeting">
     <pattern value="(hi|hello) *"/>
 
-    <!-- Greet user if we know her name -->
+    <!-- Greet the user if we know his/her name -->
     <output value="Hello $UserName!" if="full($UserName)"/>
 
-    <!-- Or activate an inner context to ask user about her name -->
+    <!-- Or activate an inner context to ask user about his/her name -->
     <context if="empty($UserName)" modal="true">
       <output value="Hi! What is your name?"/>
 
@@ -43,21 +43,21 @@ Thus each context has an inner inputs with a set of patterns, and each of these 
 </context>
 ```
 
-Thus our bot can manage dialog\'s contexts extending a root one each time it is necessary for it\'s logic.
+Thus our bot can manage dialog contexts extending the root context each time it is necessary for its logic.
 
-## Context referencing
+## Context Referencing
 Of course, XML cannot implement a graph. It is more like a tree.
-But we might want to jump from one context to another from different places of our dialog.
+But we might want to jump from one context to another from different places in our dialog.
 
-Zenbot enables you to do this through a _context references_.
+Zenbot enables you to do this through _context references_.
 
-Once your [context tag](/botscript/context/) does not contain any input but has an ID, it is recognized as a reference to another context with such ID.
+If your [context tag](/botscript/context/) does not contain any input but has an ID, it is recognized as a reference to another context with such an ID.
 
 ```xml
 <context>
   <input pattern="* (weather|forecast) * [$Date] *">
 
-    <!-- If we dont know from where our user are, we have to ask -->
+    <!-- If we don’t know where is our user from, we need to ask about that -->
     <context if="empty($UserCity)">
       <output value="Where are you from?"/>
       <input pattern="$City">
@@ -72,17 +72,17 @@ Once your [context tag](/botscript/context/) does not contain any input but has 
 </context>
 ```
 
-In the example above you can see how our bot can previously ask the user about her location and jump to the "weather" context to do the main work after this.
-But if our bot already knows the user\'s location, it will skip the first context.
+In the example above you can see how our bot can, first of all, ask the user about his/her location and then jump to the "weather" context to do the main work after that.
+But if our bot already knows the user’s location, it will skip the first context.
 
-{% include note.html text="You can use empty context tag without ID attribute to jump to the root context." %}
+{% include note.html text="You can use an empty context tag with no ID attribute to jump to the root context." %}
 
-## Empty contexts
-Note that the context need not to have any inputs inside it if it shouldn\'t proceed any sequential requests.
+## Empty Contexts
+Note that a context doesn’t need to have any inputs inside if it shouldn’t proceed any sequential requests.
 
-In this case it\'s only purpose is to perform some tasks and maybe return some outputs.
+In this case its only purpose is to perform some tasks and maybe return some outputs.
 
-From the example above our "weather" context may has such content:
+From the example above our "weather" context may have the following content:
 
 ```xml
 ...
@@ -92,5 +92,5 @@ From the example above our "weather" context may has such content:
 </context>
 ```
 
-You can use an empty context to define a final point of the dialog, which can be achieved through the references from a different branches of the Botscript.
+You can use an empty context to define a final point of the dialog that can be achieved through references from different branches of the Botscript.
 

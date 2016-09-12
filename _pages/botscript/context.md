@@ -1,6 +1,6 @@
 ---
 layout: default
-title: context tag
+title: The Context Tag
 permalink: /botscript/context/
 ---
 
@@ -8,12 +8,12 @@ This tag describes a particular context in the Botscript.
 
 It can contain:
 
-- [inputs](/botscript/input/)
-- [outputs](/botscript/output/)
-- [samples](/botscript/sample/)
-- custom [patterns](/botscript/pattern/)
-- [variables](/botscript/var/)
-- [get](/botscript/get/) and [post](/botscript/post/) actions
+- [Inputs](/botscript/input/)
+- [Outputs](/botscript/output/)
+- [Samples](/botscript/sample/)
+- Custom [patterns](/botscript/pattern/)
+- [Variables](/botscript/var/)
+- [Get](/botscript/get/) and [Post](/botscript/post/) actions
 
 ## Summary
 Each context in the Botscript contains a part of the dialog.
@@ -34,9 +34,9 @@ There is one _root context_ in each Botscript that contains all the rest of the 
 
 {% include note.html text="You can think about a context as a \"hole\" where the user’s input text falls.
 It falls through all inputs inside the context until a pattern in one of the inputs matches this text.
-Then one of the nested contexts extends the root context and next the user’s input will fall through it." %}
+Then one of the nested contexts extends the root context and then the user’s input will fall through it." %}
 
-**What if none of the inputs contains appropriate pattern that would match the user’s text?**
+**And what if none of the inputs contains appropriate pattern that would match the user’s text?**
 In such case an empty response will be returned.
 
 ### Context Extending
@@ -60,20 +60,20 @@ For example, if your context looks like the following:
 
 When user asks something like "What is the weather today?", our bot will respond "The weather is fine!"
 
-Then Zenbot extends the root context by inner one with the `id` having value `weather_context`.
+Then Zenbot extends the root context by the inner one with the `id` having value `weather_context`.
 It means that the pattern `* $Date` will be added to the root context, so the user can ask "And what about tomorrow?".
 And get back a response "It will be much better!"
 
 Then he/she can ask again "And next Monday?" — and our bot will understand him/her correctly.
 It is so because the root context is already extended and the bot understands what we are talking about.
-At the same time the user can of course ask again "Tell me the forecast", and bot will process it.
+At the same time the user can of course ask again "Tell me the forecast", and the bot will process it.
 
 {% include note.html text="Thus instead of a final state machine paradigm, Zenbot continuously extends the root context for dialog branching implementation." %}
 
 Please read more about context management in the [dedicated chapter](/botscript/conversations/).
 
-### Modal Context
-Sometimes you need to give an exclusive priority for any context to catch the next user’s request ignoring the rest of the root context.
+### Modal Contexts
+Sometimes you need to give an exclusive priority for a given context to catch the next user’s request ignoring the rest of the root context.
 
 Such technique is called a "modal context". Let’s look at it:
 
@@ -83,7 +83,7 @@ Such technique is called a "modal context". Let’s look at it:
     <output value="Done!" if="full($Text)"/>
 
     <context if="empty($Text)" modal="true"> <!-- A modal context -->
-      <output value="What would you like me to remind you?"/>
+      <output value="What would you like me to remind you about?"/>
 
       <input pattern="$Text">
         <output value="Done!"/>
@@ -98,8 +98,8 @@ Here we have implemented a very simple reminder dialog. The user can say "Remind
 In this case the bot will respond with "Done!" output.
 
 But what if the user didn’t provide the reminder text?
-Well, in such case our bot will ask him/her "What would you like me to remind you?"
-And the next user’s request must be interpreted as the reminder text, even he/she says again "Remind".
+Well, in such case our bot will ask him/her "What would you like me to remind you about?"
+And the next user’s request must be interpreted as the reminder text, even he/she says "Remind" again.
 
 This is because the nested context is a _modal_ context.
 So it ignores everything except the inner inputs and always matches the user’s input through them.
