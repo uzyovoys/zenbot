@@ -15,7 +15,7 @@ Copy it and paste in the "Cisco Spark" section in your Zenbot web console.
 
 That is all! Click "Save settings" button, and now your bot can talk with users in Spark messenger.
 
-## Add a Spark bot into a team room
+## Add a Spark bot to your team
 Add a new team member with your Spark bot\'s Username (like "mybot@sparkbot.io").
 Your bot will be automatically added to your team and you can send a text messages in private 1:1 chat or via mention in any room.
 
