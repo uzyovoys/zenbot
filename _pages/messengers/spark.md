@@ -4,7 +4,7 @@ title: Cisco Spark
 permalink: /messengers/spark/
 ---
 
-Zenbot has been integrated with a [Cisco Spark]("https://www.ciscospark.com/") messenger. Thus you can easily deploy your bot in Cisco Spark and share it with any teams.
+Zenbot has been integrated with a [Cisco Spark](https://www.ciscospark.com/) messenger. Thus you can easily deploy your bot in Cisco Spark and share it with any teams.
 
 ## How to create a Spark bot
 There is a [comprehensive documentation](https://developer.ciscospark.com/bots.html) regarding Cisco Spark bots.
