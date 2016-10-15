@@ -76,7 +76,7 @@ Your Zenbot\'s bot will respond with some text regarding the [Botscript](/botscr
 ## Variables
 Each time Zenbot receives a request from Slack, it generates a set of special variables you can use inside a Botscript.
 
-- **req_slack_token** - the token of Slack bot
+- **req_slack_token** - the token of your Slack bot
 - **req_slack_channel** - ID of the channel from where the request was sent
 - **req_slack_team** - ID of the team from where the request was sent
 - **req_slack_user** - ID of the user who has sent the request
