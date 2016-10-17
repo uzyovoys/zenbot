@@ -17,13 +17,15 @@ That is all! Click "Save settings" button, and now your bot can talk with users 
 
 ## Add a Spark bot to your team
 Add a new team member with your Spark bot\'s Username (like "mybot@sparkbot.io").
+You can find this name in [My Apps](https://developer.ciscospark.com/apps.html) section.
+
 Your bot will be automatically added to your team and you can send a text messages in private 1:1 chat or via mention in any room.
 
 ## How to share Spark bot with others
-Just send your Spark bot\'s Username (like "mybot@sparkbot.io").
+Anybody from other team can easily add your bot via it's username (like "mybot@sparkbot.io").
 
 ## Variables
-Each time Zenbot receives a request from the user in Spark, it generates a set of special variables you can use inside a Botscript.
+Each time Zenbot receives a request from the user in Spark, it generates a set of special variables you can use in Botscript.
 
 - **$req_spark_token** - the token of your Spark bot
 - **$req_spark_room** - a unique ID of the room where the bot was received a request from the user
