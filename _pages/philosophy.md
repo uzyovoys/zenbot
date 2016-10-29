@@ -26,7 +26,7 @@ So again - we have to implement the text or voice generation on our side to solv
 As a result we can see, how much do we need to do on our own to implement a neat natural language interface...
 
 ## Why Zenbot?
-Zenbot service solves all these tasks with ease, enabling you to encapsulate your natural language logic in one place without spreading the code between NLP services and your own source code.
+Zenbot solves all these tasks with ease, enabling you to encapsulate your natural language logic in one place without spreading the code between NLP services and your own source code.
 
 It takes care about NLP and AI stuff allowing you to keep your business logic clean.
 **You do not have to mess up all together and have deep knowledge in artificial intelligence discipline.**

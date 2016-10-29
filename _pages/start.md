@@ -9,18 +9,18 @@ Well, there was a good [introduction](/) and now it is time to get closer to Zen
 # What Is Zenbot
 Zenbot is an online _natural language processing_ (NLP) service and bot hosting.
 
-It allows you to add natural language interface to any application, website or chat bot for widely used messengers like Facebook, Slack, Skype and Telegram.
+It enables you to add a natural language interface to any application, website or chatbot for widely used messengers like Facebook, Slack, Skype and Telegram.
 
 ## Natural Language Interface?
-Yep! າhe era of artificial intelligence and advanced human-to-computer interfaces is already here!
+Yep! The era of artificial intelligence and advanced human-to-computer interfaces is already here!
 
-Zenbot makes it really easy to upgrade your service or application so _it can understand_ the user’s text or voice input.
+Zenbot makes it really easy to upgrade your bot or application so _it can understand_ the user’s text or voice input.
 
 ## Where to Use It?
-Well, strictly speaking, you can use this ability everywhere instead of large forms, overloaded interfaces, bunches of buttons and checkboxes and other UI components.
+Strictly speaking, you can use this ability everywhere instead of large forms, overloaded interfaces, bunches of buttons and checkboxes and other UI components.
 
-Also there are some areas where user’s voice is one of the most appropriate choices for human-to-machine interface.
-Like smart homes, automotive applications, wearable devices, and yes — **chat bots**!
+Also there are some areas where the user’s voice is one of the most appropriate choice for human-to-machine interface.
+Like smart homes, automotive applications, wearable devices, and yes — **chatbots**!
 
 # How Does It Work?
 You have to create a [Botscript](/botscript/) (a simple XML formatted file) and upload it to Zenbot through [web console](https://zenbot.org).
@@ -31,14 +31,14 @@ You can also provide some code in your Botscript, so Zenbot can compute it "on-t
 Thus you can request some external service\'s REST API, calculate some variable\'s value and so on _right inside your bot_!
 
 As a result, Zenbot generates some text output and a bunch of resulting [variables](/vars/variables/) you can use on your side if you need.
-And the next request will be processed by Zenbot through the extended context with access to the previously calculated variables.
+And the next request will be processed by Zenbot through the extended context with bunch of previously calculated variables in memory.
 
-{% include note.html text="Note that you do not have to have any external servers! Zenbot hosts all your bots itself." %}
+{% include note.html text="Note that you do not have to have any external servers or databases! Zenbot hosts all your bots by itself." %}
 
 ### More than a "pattern matcher"
-Based on the pattern matching concept, Zenbot is not limited with only this feature.
+Based on the pattern matching concept, Zenbot is not limited with this feature only.
 
-Thus Zenbot enables you to build a _conversational_ bots though idea of [extendable conditional contexts](/botscript/conversations/).
+Zenbot enables you to build a _conversational_ bots though the idea of [extendable conditional contexts](/botscript/conversations/).
 
 Also Zenbot performs named _entity extraction_ and provides a simple way to store and operate with a big data in your patterns through [custom entities](/pattern/entities/) (like cities names).
 
