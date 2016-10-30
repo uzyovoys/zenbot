@@ -117,6 +117,30 @@ li.sidebar-brand > a {
     padding-bottom: 40px;
 }
 
+.contacts {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+}
+
+.btn-rounded {
+    border-radius: 50px;
+}
+
+.btn-contact {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    -o-animation-delay: 3s;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
