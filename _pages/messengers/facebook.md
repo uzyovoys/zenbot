@@ -28,6 +28,8 @@ All you need to do - is to sign in with your Facebook account in Zenbot\'s web c
 After that you have to click "Connect" button and **that is it!**
 You have published your bot in three clicks without any app review and complicated settings.
 
+<img src="/img/facebook_connect.gif" width="90%">
+
 ### Connect via your App
 If you would like to use your own Facebook App to connect it to your bot, you have to create an app and provide page access token and verification token in Zenbot\'s web console.
 _See details below_.
@@ -91,6 +93,54 @@ Thus you have to define a corresponding input pattern in your Botscript to handl
 ## Test your Facebook bot
 Just open your app\'s Facebook page, click on "Messages" and send some messages.
 Your Zenbot\'s bot will reply with text regarding your [Botscript](/botscript/).
+
+## Quick replies
+Using a [sample](/botscript/sample/) tag you can generate [Quick replies](https://developers.facebook.com/docs/messenger-platform/send-api-reference/quick-replies) buttons.
+
+<img src="https://scontent-arn2-1.xx.fbcdn.net/t39.2365-6/14175277_1582251242076612_248078259_n.png" width="70%">
+
+Once the user clicks on one of them, your bot receives a request with text corresponding the clicked button.
+
+## Native output
+<img src="https://scontent-arn2-1.xx.fbcdn.net/t39.2365-6/13509251_1026555627430343_1803381600_n.png" width="20%" align="right" style="margin: 20px">
+
+If you wish your bot to generate some complex Facebook Messenger related output (like images, generic templates, buttons and etc) you can define a complete [Messenger API](https://developers.facebook.com/docs/messenger-platform/send-api-reference) related JSON in the [output](/botscript/output/) tag.
+
+```xml
+<output>
+    <!CDATA[
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+              {
+                "title":"Welcome to Peter\'s Hats",
+                "item_url":"https://petersfancybrownhats.com",
+                "image_url":"https://petersfancybrownhats.com/company_image.png",
+                "subtitle":"We\'ve got the right hat for everyone.",
+                "buttons":[
+                  {
+                    "type":"web_url",
+                    "url":"https://petersfancybrownhats.com",
+                    "title":"View Website"
+                  },
+                  {
+                    "type":"postback",
+                    "title":"Start Chatting",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  }              
+                ]
+              }
+            ]
+          }
+    ]]>
+</output>
+```
+
+If the user clicks on one of the buttons with postback, this postback will be received by Zenbot as an input.
+
+_Note that you have to define only a "message" part of the JSON message._
 
 ## Variables
 Each time Zenbot receives a request from Facebook Messenger, it generates a set of special variables you can use inside a Botscript.

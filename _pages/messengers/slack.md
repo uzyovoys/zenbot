@@ -15,7 +15,7 @@ Simply copy this token and paste it into "Slack settings" in your Zenbot\'s bot 
 {% include note.html text="Note that you do not have to install any webhooks for your Slack bot." %}
 
 ## Slash commands
-Zenbot enables your bot react on any [Slash commands](https://api.slack.com/slash-commands) as well as regular messages.
+Zenbot enables your bot to react on any [Slash commands](https://api.slack.com/slash-commands) as well as regular messages.
 
 {% include note.html text="Slash commands allows the user to request your bot in any channel." %}
 
@@ -25,10 +25,12 @@ In your Botscript define an input pattern which looks like `/<you slash command>
 For example, if you would like your bot to respond on a slash command like `/doit something`, you have to define an input pattern `/doit $Text`.
 
 ## Distribute your Slack bot
-If you would like to share your Slack bot, you have to create **Slack application** with bundled bot to distribute it to another teams.
+If you would like to share your Slack bot, you have to create a **Slack Application** with bundled bot to distribute it to another teams.
 [This guide](https://api.slack.com/slack-apps) completely describes this process.
 
-All you have to do - is to create Slack app in your Slack team account, provide **Redirect URI** and obtain **Client ID** and **Client Secret**.
+All you have to do - is to create a Slack Application in your Slack team account, provide **Redirect URI** and obtain **Client ID** and **Client Secret**.
+
+<img src="/img/slack_settings.png" width="70%">
 
 ### Redirect URI
 The application creation process requires you to define a **Redirect URI** for OAuth authorization.
@@ -66,6 +68,53 @@ As well as [Attachments](https://api.slack.com/docs/message-attachments) and pla
 
 Zenbot will automatically understand your bot\'s response format and generate an appropriate request to the Slack\'s API.
 _You have not to worry about this anymore._
+
+## Interactive messages
+[Interactive messages](https://api.slack.com/docs/message-buttons) enables your bot to generate and process buttons in each response.
+
+To enable this feature you have to enable "Interactive Messages" in the settings of your Slack application.
+It will ask you about "Request URL". Please use the URL like `https://zenbot.org/api/slack/<your bot ID>`.
+
+Than you can use [sample](/botscript/sample/) tag to generate buttons from your Botscript.
+
+![Slack Interactive messages](https://a.slack-edge.com/dcb1/img/api/message_guidelines/Example_6.gif)
+
+{% include note.html text="Note that you have to create a Slack Application and provide it's Client ID and Client Secret in the bot's preferences to use buttons." %}
+
+## Native output
+If you wish to generate a complex output (instead of simple text and buttons) you can use a Slack API related [JSON formatted message](https://api.slack.com/docs/messages) in the [output](/botscript/output/) tag.
+
+```xml
+<output>
+<![CDATA[
+  {
+  "text": "Relative time in *$CityName ($CityCountry)*",
+  "attachments" : [
+      {
+          "fallback": "Your client doesn't support attachments",
+          "color": "#ffbb00",
+          "fields" : [
+              {"title" : "$CityName", "value" : "$Time", "short" : true},
+              {"title" : "Here", "value" : "$TimeHere", "short" : true}
+          ]
+      },
+      {
+          "fallback": "Your client doesn't support attachments",
+          "color": "#00a2ff",
+          "fields" : [
+              {"title" : "Here", "value" : "$Time", "short" : true},
+              {"title" : "$CityName", "value" : "$TimeThere", "short" : true}
+          ]
+      }
+    ]
+  }
+]]>
+</output>
+```
+
+In this case Zenbot will generate a native output that will be rendered in Slack client as is:
+
+<img src="/img/slack_formatting.gif" width="100%">
 
 ## Test your Slack bot
 Now you can select your bot in Slack\'s contacts list and send a direct text message.

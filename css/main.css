@@ -141,6 +141,11 @@ li.sidebar-brand > a {
     -o-animation-delay: 3s;
 }
 
+.footer .btn {
+    margin: 6px;
+    width: 330px;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;

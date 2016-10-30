@@ -11,16 +11,18 @@ Zenbot is an online _natural language processing_ (NLP) service and bot hosting.
 
 It enables you to add a natural language interface to any application, website or chatbot for widely used messengers like Facebook, Slack, Skype and Telegram.
 
-## Natural Language Interface?
-Yep! The era of artificial intelligence and advanced human-to-computer interfaces is already here!
+<div style="background-color: #000; padding: 20px; color: #fff; min-height: 400px">
+<img src="/img/doit_mockup.gif" width="199" height="368" style="margin: 10px" align="right">
 
-Zenbot makes it really easy to upgrade your bot or application so _it can understand_ the user’s text or voice input.
+<h2>Natural Language Interface?</h2>
+<p>Yep! The era of artificial intelligence and advanced human-to-computer interfaces is already here!</p>
+<p>Zenbot makes it really easy to upgrade your bot or application so <i>it can understand</i> the user’s text or voice input.</p>
 
-## Where to Use It?
-Strictly speaking, you can use this ability everywhere instead of large forms, overloaded interfaces, bunches of buttons and checkboxes and other UI components.
-
-Also there are some areas where the user’s voice is one of the most appropriate choice for human-to-machine interface.
-Like smart homes, automotive applications, wearable devices, and yes — **chatbots**!
+<h2>Where to Use It?</h2>
+<p>Strictly speaking, you can use this ability everywhere instead of large forms, overloaded interfaces, bunches of buttons and checkboxes and other UI components.</p>
+<p>Also there are some areas where the user’s voice is one of the most appropriate choice for human-to-machine interface. 
+Like smart homes, automotive applications, wearable devices, and yes — <b>chatbots</b>!</p>
+</div>
 
 # How Does It Work?
 You have to create a [Botscript](/botscript/) (a simple XML formatted file) and upload it to Zenbot through [web console](https://zenbot.org).
