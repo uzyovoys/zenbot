@@ -186,6 +186,8 @@ Each of them has "req_" prefix so that you can easily distinguish it from a regu
 - **req_lon** - user\'s longitude (optional double number)
 - **req_user** - user\'s identifier (optional string)
 - **req_user_name** - user\'s display name (optional string)
+- **req_user_firstname** - user\'s first name (optional string)
+- **req_user_lastname** - user\'s last name (optional string)
 - **req_user_email** - user\'s email address (optional string)
 - **req_context** - request\'s context identifier (optional string)
 - **req_timestamp** - user\'s local time timestamp in milliseconds (number)

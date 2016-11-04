@@ -37,6 +37,8 @@ Each time Zenbot receives a request from Skype, it produces a set of special var
 - **req_skype_user** - an ID of Skype user
 - **req_skype_token** - Skype bot token
 
+Find more available variables in [Global Variables](/vars/variables/) chapter.
+
 ## Restrictions
 Please note that Skype doesn\'t provide any extended info about the user, like latitude and longitude, current time and GMT offset.
 Thus you have to obtain this data on your own if you need it.

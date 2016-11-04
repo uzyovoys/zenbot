@@ -38,3 +38,7 @@ Each time Zenbot receives a request from the user in Spark, it generates a set o
 - **$req_spark_token** - the token of your Spark bot
 - **$req_spark_room** - a unique ID of the room where the bot was received a request from the user
 - **$req_spark_user** - a unique ID of the user who has sent a request
+- **$req_spark_avatar** - a user\'s avatar link
+- **$req_spark_org** - an ID of user\'s organisation
+
+Find more available variables in [Global Variables](/vars/variables/) chapter.

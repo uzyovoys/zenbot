@@ -132,3 +132,5 @@ Each time Zenbot receives a request from Slack, it generates a set of special va
 - **req_slack_username** - user\'s name
 - **req_slack_username_real** - user\'s real name
 - **req_slack_usermail** - user\'s email address
+
+Find more available variables in [Global Variables](/vars/variables/) chapter.

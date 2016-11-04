@@ -24,6 +24,8 @@ Each time Zenbot receives a request from Kik, it generates a set of special vari
 - **req_kik_bot** - Kik bot Username
 - **req_kik_key** - Kik bot API Key
 
+Find more available variables in [Global Variables](/vars/variables/) chapter.
+
 ## Restrictions
 Please note that Kik doesn\'t provide any extended info about the user, like latitude and longitude, current time and GMT offset.
 Thus you have to obtain this data on your own if you need it.

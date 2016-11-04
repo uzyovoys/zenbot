@@ -32,6 +32,8 @@ Each time Zenbot receives a request from WeChat, it generates a set of special v
 - **req_wechat_user** - an ID of WeChat user who has sent a request
 - **req_wechat_to** - an ID of WeChat bot
 
+Find more available variables in [Global Variables](/vars/variables/) chapter.
+
 ## Restrictions
 Please note that WeChat doesn\'t provide any extended info about the user, like latitude and longitude, current time and GMT offset.
 Thus you have to obtain this data on your own if you need it.

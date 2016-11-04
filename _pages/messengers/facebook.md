@@ -149,3 +149,5 @@ Each time Zenbot receives a request from Facebook Messenger, it generates a set 
 - **req_facebook_user_firstname** - user\'s first name
 - **req_facebook_user_lastname** - user\'s last name
 - **req_facebook_user_gender** - user\'s gender
+
+Find more available variables in [Global Variables](/vars/variables/) chapter.

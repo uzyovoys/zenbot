@@ -44,8 +44,10 @@ So if the matched input has not an \"id\" attribute, it will not be tracked." %}
 ## Variables
 Each time Zenbot receives a request from Telegram, it produces a set of special variables.
 
-- `req_telegram_token` - your Telegram bot Token
-- `req_telegram_chat` - current Telegram chat identifier
+- **req_telegram_token** - your Telegram bot Token
+- **req_telegram_chat** - current Telegram chat identifier
+
+Find more available variables in [Global Variables](/vars/variables/) chapter.
 
 ## Restrictions
 Please note that Telegram doesn\'t provide any extended info about the user, like latitude and longitude, current time and GMT offset.
