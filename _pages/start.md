@@ -46,11 +46,13 @@ Also Zenbot performs named _entity extraction_ and provides a simple way to stor
 
 And moreover, Zenbot performs not only an NLP and AI stuff - it also allows you to evaluate some [Javascript code](/vars/javascript/) right on the Zenbot\'s side to calculate variable values.
 
-## Messengers Integration and REST API
-You can use Zenbot’s [REST API](/rest/) to post text requests from any of your apps or websites and get output.
+## Messengers Integration, REST API and Telephony
+You can use Zenbot’s [REST API](/rest/) to process any text or speech input in your own application or website through a Zenbot\'s NLP engine and build a conversations.
 
-But moreover, Zenbot is already integrated with such popular messengers as [Facebook Messenger](/messengers/facebook/), [Slack](/messengers/slack/), [Skype](/messengers/skype/), [Telegram](/messengers/telegram/), [Kik](/messengers/kik/) and [WeChat](/messengers/wechat/)!
+Also Zenbot is already integrated with such popular messengers as [Facebook Messenger](/messengers/facebook/), [Slack](/messengers/slack/), [Skype](/messengers/skype/), [Telegram](/messengers/telegram/), [Kik](/messengers/kik/) and [WeChat](/messengers/wechat/)!
 So you can easily spread your bot over these platforms to make your service available as a chat bot for millions of customers!
+
+And moreover - you can use a telephony channels to robotize your call-center with [Voximplant integration](/telephony/voximplant/)!
 
 {% include note.html text="And once again — you do not have to implement all these messengers API and host such implementation on external servers! Zenbot takes care about this for you. All you need is to provide settings for each messenger platform through Zenbot web console." %}
 

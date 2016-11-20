@@ -75,7 +75,10 @@ There are a set of useful functions to work with such responses, like CSS select
 Read more about these functions in a [dedicated chapter](/expressions/).
 
 ## Timeouts
-Zenbot wouldn’t wait too much. So it uses HTTP response timeout about 15 seconds.
+Zenbot\'s HTTP response timeout is about 15 seconds.
+
+## Asynchronous requests
+Do not provide a "var" attribute if you would like to process HTTP request asynchronously.
 
 ## Parameters and headers
 You can define a set of HTTP request parameters and headers inside the `get` tag.
@@ -92,21 +95,21 @@ Each `header` tag should contain _name_ and _value_ attributes.
 
 ## Attributes
 
-### The **url** Attribute
+### **url** attribute
 Define the URL of the external service in this required attribute.
 
 **Do not provide parameters inside this tag.** Please use inner `param` tags for this purpose.
 
-### **Var** Attribute
+### **var** attribute
 Define the name for a [variable](/botscript/var/) to save the response in for this request. It is a required attribute.
 
-### **If** Attribute
+### **if** attribute
 You can define a condition (using [expressions](/vars/expressions/)) that will check if Zenbot should execute the request.
 If such condition is defined, Zenbot first will evaluate it and, if it returns `1`, Zenbot will perform the request.
 Otherwise this request will be skipped.
 
-### **Lang** Attribute
+### **lang** attribute
 Define the user request language code if this action should be performed only for the particular language.
 
-### **channel** Attribute
+### **channel** attribute
 Define channel IDs here to make an HTTP call only for requests from the particular messengers.

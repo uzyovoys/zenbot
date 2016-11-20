@@ -47,6 +47,10 @@ Your bot becomes public right after a "Save settings" button click.
 Buttons helps to build more familiar user interface in messengers.
 With Zenbot your bot can process both text and buttons clicks, so you don\'t loss the messengers\' functionality.
 
+### Telephony integrations
+Your bot can talk with users even in telephony channel.
+With [Voximplant integration](/telephony/voximplant/) it is easy to connect your bot with any phone, and even robotize your call-center.
+
 ### REST API
 It is easy to connect any of your applications or websites to your conversational bot over Zenbot [REST API](/rest/).
 Thus you can create your own Siri-like application or just process a natural language requests on your website.

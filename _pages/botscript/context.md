@@ -122,12 +122,12 @@ Such patterns are called General patterns, and their main purpose is to define r
 
 ## Attributes
 
-### **modal** Attribute
+### **modal** attribute
 Controls the modality of a context. You can set it to `true` to make a particular context modal.
 
 Read about modal contexts above.
 
-### **id** Attribute
+### **id** attribute
 Each context (except the root context) has its own unique string identifier.
 You can define your own `id` attribute like this:
 
@@ -152,7 +152,7 @@ You can also use this identifier to reference another context from an input:
 {% include note.html text="Note that the `id` attribute is optional.
 You do not have to define it if you do not need to use it. In such case Zenbot will generate it automatically." %}
 
-### **if** Attribute
+### **if** attribute
 When Zenbot decides which of the nested contexts should be activated, it looks in the optional `if` attribute to find a condition expression to evaluate.
 
 If such a condition is defined, Zenbot evaluates it with a bunch of existing variables.
@@ -182,7 +182,7 @@ Well, good choice — Zenbot will select it and, as a result, return "Hello Joe!
 
 Read more about expressions in [this chapter](/vars/expressions/).
 
-### **lang** Attribute
+### **lang** attribute
 Since Botscript is language-independent, you can define the language code of the user request to activate the particular context.
 If the user’s language is not equal to the defined language, the context will be skipped automatically.
 
