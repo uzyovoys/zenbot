@@ -6,7 +6,7 @@ permalink: /telephony/voximplant/
 
 Zenbot enables your bots to talk with users in telephony channel.
 This makes it possible to create a fully robotized call-centers that automatically respond on every phone call and make a lot of useful things.
-Like booking hotels, preparing some orders, posing issues and much more.
+Like booking hotels, preparing some orders, posting issues and much more.
 
 ## Voximplant
 Voximplant is a telephony platform as a service that enables you to create any scenarios for automated phone calls processing.
