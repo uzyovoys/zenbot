@@ -16,8 +16,8 @@ Thus you are not limited with expressions syntax and built-in functions and can 
     <script>
       <![CDATA[
         var result = '';
-        for (var i = 0; i < Number.lenght; i++) {
-          result += Number[i] + ' ';
+        for (var i = 0; i < $Number.lenght; i++) {
+          result += $Number[i] + ' ';
         }
         result;
       ]]>
@@ -46,11 +46,10 @@ Thus Zenbot will evaluate such code to obtain an actual variable\'s value.
 
 ## Referencing external variables
 In the code above you can see how you can reference some external variables inside your Javascript code.
-Instead of using `$` symbol just use variable\'s name as is.
-Zenbot converts each variable from patterns for you, so you can work with them as with a regular object and arrays of Javascript.
+Zenbot converts each variable from patterns for you, so you can work with them as with a regular object and arrays in Javascript.
 
 ## Limitations
 Javascript code in Zenbot runs inside a safe "sandbox".
 Thus you cannot use any sort of network functions or file system\'s abstractions.
 
-{% include note.html text="You can use GET and POST actions of Zenbot to perform some network activity if you need." %}
+{% include note.html text="You can use GET and POST actions of Zenbot to perform some network activity." %}
