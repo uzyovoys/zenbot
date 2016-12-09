@@ -108,7 +108,8 @@ If you wish your bot to generate some complex Facebook Messenger related output 
 
 ```xml
 <output>
-    <!CDATA[
+    <![CDATA[
+      {
         "attachment":{
           "type":"template",
           "payload":{
@@ -134,13 +135,14 @@ If you wish your bot to generate some complex Facebook Messenger related output 
               }
             ]
           }
+      }
     ]]>
 </output>
 ```
 
 If the user clicks on one of the buttons with postback, this postback will be received by Zenbot as an input.
 
-_Note that you have to define only a "message" part of the JSON message._
+_Note that you have to define only a "message" part of the JSON message. And enclose it in **curly brackets**._
 
 ## Variables
 Each time Zenbot receives a request from Facebook Messenger, it generates a set of special variables you can use inside a Botscript.
