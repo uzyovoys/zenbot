@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Zendesk
-permalink: /channel/zendesk/
+permalink: /channels/zendesk/
 ---
 
 Zenbot enables your bots to automate youbeautiful's support team that uses [Zendesk](https://zendesk.com) as a support tool.
