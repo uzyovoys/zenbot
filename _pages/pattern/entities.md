@@ -78,7 +78,7 @@ So just pick the appropriate language from the list of available languages.
 #### Entity TSV file
 Once entity\'s name and language have been provided, upload a TSV (tab separated values) file with your entity\'s data.
 
-**This file must be a tab-separated TSV formatted file**, where the first part of each line is any value you wish to map the item to, and all others parts are names of this item.
+**This file must be a tab-separated TSV formatted file**, where the first part of each line is any value you wish to map the item to, and all others parts are synonyms of this item.
 
 For example if we would like to create _cities_ custom entity, we can use the following format of our CSV file:
 
@@ -91,7 +91,7 @@ For example if we would like to create _cities_ custom entity, we can use the fo
 Here is a latitude and longitude in the first part, and city\'s name in the second.
 _Please note that we used a tab delimiter, not comma._
 
-{% include note.html text="Note that you have to provide at least two parts in each line." %}
+{% include note.html text="Note that you can define only a single part on the line. In this case this part becomes an ID and a single synonym." %}
 
 #### Entity value
 Once matched, entity is mapped to the value you have provided in the first part of TSV file.
