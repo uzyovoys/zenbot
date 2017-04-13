@@ -25,7 +25,8 @@ Like smart homes, automotive applications, wearable devices, and yes — <b>chat
 </div>
 
 # How Does It Work?
-You have to create a [Botscript](/botscript/) (a simple XML formatted file) and upload it to Zenbot through [web console](https://zenbot.org).
+You have to create a [Botscript](/botscript/) (a simple XML formatted file) and upload it to your Git repository.
+Then it is simply to connect your bot on Zenbot with this repository to enable Zenbot automatically deploy your Botscript with every commit.
 
 Zenbot creates a bot from your Botscript and proceeds all text requests to your bot managing conversation, context understanding, entity extraction and all other AI stuff.
 

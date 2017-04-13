@@ -10,12 +10,10 @@ It is like a program for your bot - it contains all data about dialog branching 
 {% include note.html text="But don't worry - you do not have to learn any programming language to create Botscripts." %}
 
 Zenbot "eats" Botscript as an input and builds a bot from it.
-You can manage different versions of the same Botscript on your side (by using Github repository for example) while Botscript is a regular text file.
-
-{% include note.html text="If you are a developer, you can think about Botscript like about a Makefile, Ant or Gradle build file." %}
+You can manage different versions of the same Botscript on your side (by using Github repository for example) while **Botscript is a set of regular XML files**.
 
 ## Botscript format
-Botscript is a simple XML formatted file. You can use any favorite text editor to create it.
+Botscript is a set of simple XML formatted files. You can use any favorite text editor to create it.
 
 Just take a look at a very simple Botscript to have an idea about what it is.
 
@@ -40,6 +38,14 @@ Zenbot can understand much more complex Botscripts which contain dialog branchin
 
 {% include note.html text="Try to create a file with this Botscript and upload it through Zenbot's web console to your first test bot. It is a good idea to learn how it works on a practice." %}
 
+## Multiple files in Botscript
+You are able to compose a Botscript from multiple files instead of pile everything into a single one.
+To do this just create a set of XML Botscript XML files.
+Zenbot will automatically merge it in a single bot.
+
+_Please note that you have to pay attention for "order" attribute in "context" tag to resolve dependencies between files.
+Read more in [context tag article](/botscript/context/)_
+
 ## Botscript concepts
 You have to understand some basic principles of Botscripts to be fluent with Zenbot.
 
@@ -51,7 +57,7 @@ Context in terms of Zenbot looks like a dialog context in the human communicatio
 > We all know that we understand each other not only because we talk on the same language.
 > We also share the same context - a set of "valid" phrases at this moment.
 
-Each context in Zenbot contains a set of _inputs_ (valid phrases) and set of actions Zenbot has to perform.
+Each context in Zenbot contains a set of _inputs_ (valid phrases) and set of actions Zenbot has to perform once the user says something that matches with this input.
 It also can contain nested contexts to implement dialog branching.
 Let\'s look at this example which greets a user.
 

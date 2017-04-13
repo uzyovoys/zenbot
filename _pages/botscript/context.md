@@ -120,6 +120,28 @@ Such patterns are called General patterns, and their main purpose is to define r
 </context>
 ```
 
+## Context ordering
+The context can contain patterns that are dependant from the patterns from another context that is described in different Botscript file.
+
+Zenbot doesn\'t resolve such dependencies while loads your Botscript.
+That is why you have to declare the **order of contexts loading**.
+This helps Zenbot to load the most common contexts and its\' patterns first.
+
+In the root context define the "order" attribute with appropriate integer value.
+In the example below you can see how to declare two contexts with dependant patterns.
+
+```xml
+<context order="0"> <!-- This context declares a common pattern that can be used from another context -->
+  <pattern name="CommonPattern" value="*"/>
+</context>
+```
+
+```xml
+<context> <!-- This context in the different file will be loaded after the context above -->
+  <input pattern="* $CommonPattern *"></input>
+</context>
+```
+
 ## Attributes
 
 ### **modal** attribute
@@ -151,6 +173,12 @@ You can also use this identifier to reference another context from an input:
 
 {% include note.html text="Note that the `id` attribute is optional.
 You do not have to define it if you do not need to use it. In such case Zenbot will generate it automatically." %}
+
+### **order** attribute
+If you need to declare some common patterns in one file and use them from another files, just declare the order of context loading to prevent Zenbot from loading of dependant context first.
+
+This attribute can contain any integer value. 0 means the context will be loaded first.
+You can omit this attribute as well. This means that this context will be loaded afterwards.
 
 ### **if** attribute
 When Zenbot decides which of the nested contexts should be activated, it looks in the optional `if` attribute to find a condition expression to evaluate.
