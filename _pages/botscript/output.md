@@ -165,7 +165,7 @@ Define user\'s request language codes if you would like this output to be genera
 ```
 
 ### **channel** attribute
-Define channel IDs here to generate this output only for requests from the particular messengers.
+Define channel IDs here to generate this output only for requests from the particular channels.
 
 ```xml
 <output value="Hi from Facebook $UserName!" channel="facebook"/>    <!-- Will be generated for everybody who uses your bot in Facebook -->

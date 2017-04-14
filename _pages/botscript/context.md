@@ -180,6 +180,9 @@ If you need to declare some common patterns in one file and use them from anothe
 This attribute can contain any integer value. 0 means the context will be loaded first.
 You can omit this attribute as well. This means that this context will be loaded afterwards.
 
+### **channel** attribute
+Define channel IDs here to activate this context only for requests from the particular channels.
+
 ### **if** attribute
 When Zenbot decides which of the nested contexts should be activated, it looks in the optional `if` attribute to find a condition expression to evaluate.
 

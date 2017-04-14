@@ -112,4 +112,4 @@ Otherwise this request will be skipped.
 Define the user request language code if this action should be performed only for the particular language.
 
 ### **channel** attribute
-Define channel IDs here to make an HTTP call only for requests from the particular messengers.
+Define channel IDs here to make an HTTP call only for requests from the particular channels.
