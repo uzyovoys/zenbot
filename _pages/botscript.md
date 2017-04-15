@@ -12,6 +12,12 @@ It is like a program for your bot - it contains all data about dialog branching 
 Zenbot "eats" Botscript as an input and builds a bot from it.
 You can manage different versions of the same Botscript on your side (by using Github repository for example) while **Botscript is a set of regular XML files**.
 
+## Git repository
+Once you have created a new bot, you have to define your Git repository settings.
+Zenbot **automatically build and deploys your Botscript** once you have committed any changes.
+
+This can be done for example with [Github](https://github.com) or [Butbucket](https://bitbucket.org) (the last one has a free private repositories).
+
 ## Botscript format
 Botscript is a set of simple XML formatted files. You can use any favorite text editor to create it.
 
