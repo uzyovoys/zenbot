@@ -44,6 +44,25 @@ You can also define your Javascript code in more compact mode:
 Just place "javascript:" keyword in the _value_ attribute of your _var_ tag before the Javascript code.
 Thus Zenbot will evaluate such code to obtain an actual variable\'s value.
 
+## JS files
+You can define some parts of re-usable javascript functions in separate files with ".js" extension.
+You are free to place such files in any folders inside your Bitscript project.
+Zenbot loads it on start.
+
+For example you can create a file named "common.js" with content like
+
+```javascript
+function say(txt) {
+  return txt;
+}
+```
+
+And then use this function inside your Bitscript
+
+```xml
+<var name="SayResult" value="javascript: say($Text)"/>
+```
+
 ## Referencing external variables
 In the code above you can see how you can reference some external variables inside your Javascript code.
 Zenbot converts each variable from patterns for you, so you can work with them as with a regular object and arrays in Javascript.
