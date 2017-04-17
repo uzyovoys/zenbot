@@ -14,9 +14,12 @@ You can manage different versions of the same Botscript on your side (by using G
 
 ## Git repository
 Once you have created a new bot, you have to define your Git repository settings.
-Zenbot **automatically build and deploys your Botscript** once you have committed any changes.
+Zenbot **automatically builds and deploys your Botscript** once you have committed any changes.
 
 This can be done for example with [Github](https://github.com) or [Butbucket](https://bitbucket.org) (the last one has a free private repositories).
+Here is a [comprehensive tutorial](https://guides.github.com/activities/hello-world/) about Github and Git that helps to start working with Git repositories.
+
+{% include note.html text="Pleas note that you can host multiple Botscripts in a single repository. Just define the working directory in your Repository settings in Zenbot web console to specify the Botscript directory." %}
 
 ## Botscript format
 Botscript is a set of simple XML formatted files. You can use any favorite text editor to create it.
