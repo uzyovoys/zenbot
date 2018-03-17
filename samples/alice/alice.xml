@@ -1,0 +1,55 @@
+<context>
+
+    <input pattern="* (привет*|здравствуй*) *">
+        <output if="full($UserName)">
+            <item value="Привет, $UserName! Рада снова видеть тебя!"/>
+            <item value="Здравствуй, $UserName! Я уже успела соскучиться..."/>
+
+
+        </output>
+
+        <context if="empty($UserName)" id="name">
+            <output value="Привет! Меня зовут Алиса! А это - демонстрация моего навыка, созданного с помощью платформы zenbot. Как тебя зовут?"/>
+
+            <input pattern="$Text">
+                <var name="UserName" value="cap($Text)" scope="user"/>
+                <output value="Приятно познакомиться, $UserName! Напиши мне что-нибудь."/>
+
+                <sample>
+                    <item value="Кто такая Алиса"/>
+                    <item value="Что такое бот"/>
+                </sample>
+            </input>
+        </context>
+    </input>
+
+    <input pattern="* пока *">
+        <output value="Ну пока, незнакомец!" if="empty($UserName)"/>
+        <output value="Пока-пока, $UserName!"/>
+    </input>
+
+    <input pattern="[* (кто|что) так*] $Text">
+        <context id="name" if="empty($UserName)"/>
+
+        <context id="wiki">
+            <get url="http://ru.wikipedia.org/w/api.php" var="Wiki">
+                <param name="format" value="xml"/>
+                <param name="action" value="opensearch"/>
+                <param name="search" value="$Text"/>
+            </get>
+
+            <var name="Result" value="javascript: $Wiki['SearchSuggestion']['Section']['Item']"/>
+            <var name="Result" value="javascript: $Result[Math.floor(Math.random() * $Result.length)]['Description']['content']" if="full($Result)"/>
+
+            <output value="$Result" if="full($Result)"/>
+
+            <output if="empty($Result)">
+                <item value='Я поискала в википедии, но ничего не нашла по запросу "$Text"'/>
+                <item value="В википедии ничего не нашлось..."/>
+            </output>
+
+        </context>
+
+    </input>
+
+</context>
