@@ -9,8 +9,6 @@
         <output if="full($UserName)">
             <item value="Привет, $UserName! Рада снова видеть тебя!"/>
             <item value="Здравствуй, $UserName! Я уже успела соскучиться..."/>
-
-
         </output>
 
         <context if="empty($UserName)" id="name">
@@ -39,15 +37,23 @@
                 <param name="search" value="$Text"/>
             </get>
 
-            <var name="Result" value="javascript: $Wiki['SearchSuggestion']['Section']['Item']"/>
-            <var name="Result" value="javascript: $Result[Math.floor(Math.random() * $Result.length)]['Description']['content']" if="full($Result)"/>
-
-            <output value="$Result" if="full($Result)"/>
+            <var name="Items" value="javascript: $Wiki['SearchSuggestion']['Section']['Item']" scope="context"/>
 
             <output if="empty($Result)">
                 <item value='Я поискала в википедии, но ничего не нашла по запросу "$Text"'/>
                 <item value="В википедии ничего не нашлось..."/>
             </output>
+
+            <context if="full($Result)" id="result">
+                <var name="Result" value="javascript: $Result[Math.floor(Math.random() * $Items.length)]['Description']['content']"/>
+                <output value="$Result" if="full($Result)"/>
+
+                <input pattern="* (еще|другой вариант) *">
+                    <context id="result"/>
+                </input>
+
+                <sample value="Другой вариант"/>
+            </context>
 
         </context>
 
