@@ -1,5 +1,10 @@
 <context>
 
+    <sample>
+        <item value="Кто такая Алиса"/>
+        <item value="Что такое бот"/>
+    </sample>
+
     <input pattern="* (привет*|здравствуй*) *">
         <output if="full($UserName)">
             <item value="Привет, $UserName! Рада снова видеть тебя!"/>
@@ -14,11 +19,7 @@
             <input pattern="$Text">
                 <var name="UserName" value="cap($Text)" scope="user"/>
                 <output value="Приятно познакомиться, $UserName! Напиши мне что-нибудь."/>
-
-                <sample>
-                    <item value="Кто такая Алиса"/>
-                    <item value="Что такое бот"/>
-                </sample>
+                <context/>
             </input>
         </context>
     </input>
