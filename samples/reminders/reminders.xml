@@ -3,40 +3,40 @@
         <!-- Jump to the reminder creation if Text and Time have been provided -->
         <context id="reminder" if="full($Text) and full($Time)"/>
 
-        <!-- Ask Text of reminder if it was not provided -->
-        <context if="empty($Text)" modal="true"> <!-- This context is modal because any text must be interpreted as a text of reminder -->
-            <output value="What would you like I remind you about?"/>
+        <!-- Ask for reminder text if it was not provided -->
+        <context if="empty($Text)" modal="true"> <!-- This context is modal because any text must be interpreted as reminder text -->
+            <output value="What would you like me to remind you about?"/>
 
             <input pattern="$Text">
-                <context id="reminder_time" if="empty($Time)"/> <!-- Ask about Date and Time -->
-                <context id="reminder"/> <!-- Or create a reminder if Time was provided -->
+                <context id="reminder_time" if="empty($Time)"/> <!-- Ask for the Date and Time -->
+                <context id="reminder"/> <!-- Or create a reminder if the Time was provided -->
             </input>
         </context>
 
-        <!-- Ask Time if it was not provided -->
+        <!-- Ask for the Time if it was not provided -->
         <context id="reminder_time" if="empty($Time)">
-            <!-- User may provide both Date and Time -->
-            <output value="When to remind you about this?" if="empty($Date)"/>
+            <!-- The user may provide both Date and Time -->
+            <output value="When should I remind you about this?" if="empty($Date)"/>
 
-            <!-- Or ask only a Time if Date was provided -->
-            <output value="Please tell me a time of the reminder"/>
+            <!-- Or ask only for the Time if the Date was provided -->
+            <output value="Please tell me the reminder time"/>
 
             <input>
                 <pattern value="* {(* $Time) [$Date]} *"/>
                 <pattern value="* $Date *"/>
 
-                <context id="reminder_time" if="empty($Time)"/> <!-- Ask about Time -->
+                <context id="reminder_time" if="empty($Time)"/> <!-- Ask for Time -->
                 <context id="reminder"/> <!-- Or create a reminder -->
             </input>
         </context>
 
-        <!-- This context doesn't contain inputs, it only contains actions -->
+        <!-- This context contains no inputs, it only contains actions -->
         <context id="reminder">
             <!-- Format date string if it is not empty -->
             <var name="Fmt" value='fmt($Date, "EEEE, MMMM dd", $req_lang)' if="full($Date)"/>
 
             <!-- Just response with text, date and time of a new reminder -->
-            <output value='OK, I will remind you "$Text" $Fmt at $Time'/>
+            <output value='OK, I will remind you "$Text" on $Fmt at $Time'/>
         </context>
     </input>
 </context>
