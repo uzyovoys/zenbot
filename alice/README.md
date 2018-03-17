@@ -2,8 +2,8 @@
 Это пример навыка для голосового ассистента [Яндекс Алиса](https://alice.yandex.ru/).
 
 ### Как пользоваться
-Создайте нового бота на [zenbot.org](https://zenbot.org) и укажите в настройках репозитрия URL этого репозитория.
-В поле Directory укажите alice.
+Создайте нового бота на [zenbot.org](https://zenbot.org) и укажите в настройках репозитрия URL *https://github.com/uzyovoys/zenbot*.
+В поле Directory укажите *alice*.
 
 Зайдите на [Яндекс.Диалоги](https://beta.dialogs.yandex.ru/developer) и создайте новый диалог для Алисы.
 В поле Webhook URL впишите URL вида **https://zenbot.org/api/alice/ключ**, где **ключ** - это идентификатор вашего бота на zenbot.org.
