@@ -28,26 +28,30 @@
     </input>
 
     <input pattern="[* (кто|что) так*] $Text">
-        <get url="http://ru.wikipedia.org/w/api.php" var="Wiki" if="full($UserName) and full($Text)">
-            <param name="format" value="xml"/>
-            <param name="action" value="opensearch"/>
-            <param name="search" value="$Text"/>
-        </get>
-
-        <var name="Items" value="javascript: $Wiki['SearchSuggestion']['Section']['Item']" if="full($Wiki)" scope="context"/>
-
         <context id="name" if="empty($UserName)"/>
 
-        <context if="full($Result)" id="result">
-            <var name="Result" value="javascript: $Result[Math.floor(Math.random() * $Items.length)]['Description']['content']"/>
+        <context id="wiki" if="full($UserName)">
+            <get url="http://ru.wikipedia.org/w/api.php" var="Wiki">
+                <param name="format" value="xml"/>
+                <param name="action" value="opensearch"/>
+                <param name="search" value="$Text"/>
+            </get>
+
+            <var name="Items" value="javascript: $Wiki['SearchSuggestion']['Section']['Item']" if="full($Wiki)" scope="context"/>
+            <var name="Result" value="javascript: $Items[Math.floor(Math.random() * $Items.length)]['Description']['content']"/>
+
+            <output if="empty($Result)">
+                <item value='Я поискала в википедии, но ничего не нашла по запросу "$Text"'/>
+                <item value="В википедии ничего не нашлось..."/>
+            </output>
+
             <output value="$Result" if="full($Result)"/>
 
-            <input pattern="* (еще|другой вариант) *">
-                <context id="result"/>
-            </input>
+            <input pattern="* (еще|другой вариант) *"/>
 
             <sample value="Другой вариант"/>
         </context>
+
 
     </input>
 
